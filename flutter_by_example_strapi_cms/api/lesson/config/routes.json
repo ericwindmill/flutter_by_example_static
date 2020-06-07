@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lessons",
+      "handler": "lesson.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lessons/count",
+      "handler": "lesson.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lessons/:id",
+      "handler": "lesson.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lessons",
+      "handler": "lesson.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lessons/:id",
+      "handler": "lesson.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lessons/:id",
+      "handler": "lesson.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

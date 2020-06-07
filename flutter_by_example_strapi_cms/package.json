@@ -1,0 +1,37 @@
+{
+  "name": "flutter-by-example-strapi-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.0.0",
+    "strapi-admin": "3.0.0",
+    "strapi-utils": "3.0.0",
+    "strapi-plugin-content-type-builder": "3.0.0",
+    "strapi-plugin-content-manager": "3.0.0",
+    "strapi-plugin-users-permissions": "3.0.0",
+    "strapi-plugin-email": "3.0.0",
+    "strapi-plugin-upload": "3.0.0",
+    "strapi-connector-bookshelf": "3.0.0",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "eca9fb65-2151-4a1b-9487-41892d6c5c79"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

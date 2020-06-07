@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "name": "lesson"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "lessons"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "name": "blog-post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "blog_posts"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "private": false
+    }
+  }
+}

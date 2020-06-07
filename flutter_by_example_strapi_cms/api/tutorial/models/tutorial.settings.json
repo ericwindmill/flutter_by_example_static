@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "name": "tutorial"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Dart",
+        "Flutter"
+      ]
+    },
+    "lessons": {
+      "collection": "lesson"
+    }
+  }
+}
