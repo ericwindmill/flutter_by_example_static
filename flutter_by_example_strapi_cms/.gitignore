@@ -110,4 +110,3 @@ coverage
 .env
 exports
 .cache
-build
