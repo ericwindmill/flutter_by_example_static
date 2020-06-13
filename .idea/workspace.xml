@@ -35,6 +35,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,7 +53,7 @@
       <workItem from="1591462666219" duration="157000" />
       <workItem from="1591462861481" duration="100000" />
       <workItem from="1591463248972" duration="11625000" />
-      <workItem from="1591631746891" duration="6782000" />
+      <workItem from="1591631746891" duration="16529000" />
     </task>
     <servers />
   </component>
@@ -80,9 +81,9 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="618" y="357" width="684" height="486" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1591987304365" />
-    <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup" timestamp="1592067213264">
+    <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup" timestamp="1592078314608">
       <screen x="0" y="0" width="3200" height="1800" />
     </state>
-    <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup/0.0.3200.1800@0.0.3200.1800" timestamp="1592067213264" />
+    <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup/0.0.3200.1800@0.0.3200.1800" timestamp="1592078314608" />
   </component>
 </project>

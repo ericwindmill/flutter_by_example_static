@@ -1,29 +1,32 @@
 import React from "react";
 import {StaticQuery, Link, graphql} from 'gatsby';
+import {TOCContainer} from "../../styles/styled_components/table_of_contents";
+import SectionHeader from "./section-header";
+import {spacing} from "../../styles/spacing";
+import CategorySection from "./category-section";
 
 class TableOfContents extends React.Component {
+
+    documentsByCategory(documents, category) {
+        return documents.filter(doc => {
+            return doc.node.category === category;
+        });
+    }
+
     render() {
         return (
             <StaticQuery
                 query={tableOfContentsQuery}
-                render={ data =>
-                    <ul>
-                        {data.allStrapiTutorial.edges.map(document => (
-                            <li key={document.node.id}>
-                                {console.log(document.node)}
-                                <p>{document.node.title} by {document.node.lessons[0].author}</p>
-                                <ul>
-                                    {document.node.lessons.map(lesson => (
-                                        <li key={lesson.id}>
-                                            <Link to={lesson.slug}>
-                                                {lesson.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
-                            ))}
-                    </ul>
+                render={data =>
+                    <TOCContainer>
+                        <div style={{textAlign: 'center', margin: spacing.scale(2)}}>
+                            <h2>Table of Contents</h2>
+                        </div>
+                        <SectionHeader part={1} title={'Dart'}/>
+                        <CategorySection sections={this.documentsByCategory(data.allStrapiTutorial.edges, 'Dart')}/>
+                        <SectionHeader part={2} title={'Flutter'}/>
+                        <CategorySection sections={this.documentsByCategory(data.allStrapiTutorial.edges, 'Flutter')}/>
+                    </TOCContainer>
                 }
             />
         );
@@ -31,7 +34,7 @@ class TableOfContents extends React.Component {
 }
 
 
-export default  TableOfContents
+export default TableOfContents
 
 const tableOfContentsQuery = graphql`
 query TableOfContentsQuery {

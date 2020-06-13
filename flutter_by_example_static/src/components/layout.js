@@ -5,6 +5,7 @@ import Footer from "../components/footer"
 import {FullWidthContentWrapper, MainContentWrapper, Wrapper} from "../styles/styled_components/layout";
 import Image from "gatsby-image";
 import {graphql, StaticQuery} from "gatsby";
+import {spacing} from "../styles/spacing";
 
 class Layout extends React.Component {
     render() {
@@ -14,7 +15,12 @@ class Layout extends React.Component {
         if (location.pathname === rootPath) {
             header = (
                 <div>
-                    <div style={{borderBottom: "1px solid black", display: 'flex', alignItems: "center", padding: "25px 0"}}>
+                    <div style={{
+                        borderBottom: "1px solid black",
+                        display: 'flex',
+                        alignItems: "center",
+                        padding: `${spacing.scale(2.5)} 0`,
+                    }}>
                         <StaticQuery
                             query={layoutQuery}
                             render={data => {
@@ -51,18 +57,17 @@ class Layout extends React.Component {
         }
         return (
             <Wrapper>
-                    <MainContentWrapper>
-                        <header>{header}</header>
-                        <main>{children}</main>
-                    </MainContentWrapper>
-                    <FullWidthContentWrapper>
-                        <Footer/>
-                    </FullWidthContentWrapper>
+                <MainContentWrapper>
+                    <header>{header}</header>
+                </MainContentWrapper>
+                <main>{children}</main>
+                <FullWidthContentWrapper>
+                    <Footer/>
+                </FullWidthContentWrapper>
             </Wrapper>
         )
     }
 }
-
 
 
 export default Layout

@@ -1,5 +1,6 @@
 import Typography from "typography"
 import Wordpress2012 from "typography-theme-wordpress-2012"
+import {colors} from "../styles/colors";
 
 Wordpress2012.overrideThemeStyles = () => {
   return {
@@ -15,7 +16,12 @@ Wordpress2012.overrideThemeStyles = () => {
     "h2": {
       fontSize: `24px`,
       margin: 0,
+    },
+    "a": {
+      color: colors.flutterBlue,
+      textDecoration: "none",
     }
+
   }
 }
 
