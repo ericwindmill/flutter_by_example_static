@@ -18,7 +18,6 @@ class TableOfContents extends React.Component {
                                             <Link to={lesson.slug}>
                                                 {lesson.title}
                                             </Link>
-
                                         </li>
                                     ))}
                                 </ul>

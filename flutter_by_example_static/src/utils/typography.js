@@ -1,17 +1,27 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Wordpress2012 from "typography-theme-wordpress-2012"
 
-Wordpress2016.overrideThemeStyles = () => {
+Wordpress2012.overrideThemeStyles = () => {
   return {
+
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "h1": {
+      fontSize: `40px`,
+      margin: 0,
+      lineHeight: 2,
+    },
+    "h2": {
+      fontSize: `24px`,
+      margin: 0,
+    }
   }
 }
 
-delete Wordpress2016.googleFonts
+delete Wordpress2012.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(Wordpress2012)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

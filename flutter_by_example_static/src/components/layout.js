@@ -1,88 +1,80 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-
-import { rhythm, scale } from "../utils/typography"
+import {rhythm} from "../utils/typography"
+import Navigation from "../components/navigation"
+import Footer from "../components/footer"
+import {FullWidthContentWrapper, MainContentWrapper, Wrapper} from "../styles/styled_components/layout";
+import Image from "gatsby-image";
+import {graphql, StaticQuery} from "gatsby";
 
 class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
-
-    if (location.pathname === rootPath || location.pathname === blogPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
+    render() {
+        const {location, children} = this.props;
+        const rootPath = `${__PATH_PREFIX__}/`;
+        let header;
+        if (location.pathname === rootPath) {
+            header = (
+                <div>
+                    <div style={{borderBottom: "1px solid black", display: 'flex', alignItems: "center", padding: "25px 0"}}>
+                        <StaticQuery
+                            query={layoutQuery}
+                            render={data => {
+                                return (
+                                    <Image
+                                        fixed={data.avatar.childImageSharp.fixed}
+                                        alt={'flutter logo'}
+                                        style={{
+                                            marginRight: rhythm(2),
+                                            minHeight: 100,
+                                        }}
+                                        imgStyle={{
+                                            minHeight: 60,
+                                        }}
+                                    />
+                                )
+                            }}
+                        />
+                        <div>
+                            <h1>Flutter by Example</h1>
+                            <h2>A complete Dart and Flutter tutorial</h2>
+                        </div>
+                    </div>
+                    <Navigation/>
+                </div>
+            );
+        } else {
+            header = (
+                <div>
+                    <h1>Flutter by Example</h1>
+                    <Navigation/>
+                </div>
+            );
+        }
+        return (
+            <Wrapper>
+                    <MainContentWrapper>
+                        <header>{header}</header>
+                        <main>{children}</main>
+                    </MainContentWrapper>
+                    <FullWidthContentWrapper>
+                        <Footer/>
+                    </FullWidthContentWrapper>
+            </Wrapper>
+        )
     }
-    return (
-      <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        </div>
-        <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </Wrapper>
-    )
-  }
 }
 
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
 
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
 
 export default Layout
+
+const layoutQuery = graphql`
+  query LayoutQuery {
+    avatar: file(absolutePath: { regex: "/logo_flutter.png/" }) {
+      childImageSharp {
+        fixed(width: 100, height: 130) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
