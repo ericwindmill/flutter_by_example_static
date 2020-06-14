@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/table-of-contents",
+      "handler": "table-of-contents.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/table-of-contents",
+      "handler": "table-of-contents.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/table-of-contents",
+      "handler": "table-of-contents.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "table_of_contents",
+  "info": {
+    "name": "table of contents"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "sortOrder": {
+      "type": "json"
+    },
+    "contents": {
+      "type": "richtext"
+    }
+  }
+}
