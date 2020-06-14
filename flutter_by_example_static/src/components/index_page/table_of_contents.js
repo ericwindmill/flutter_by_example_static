@@ -13,20 +13,55 @@ class TableOfContents extends React.Component {
         });
     }
 
+    fromJson(json) {
+        return JSON.parse(json);
+    }
+
     render() {
         return (
             <StaticQuery
                 query={tableOfContentsQuery}
-                render={data =>
-                    <TOCContainer>
+                render={(data) => {
+                    return (<TOCContainer>
                         <div style={{textAlign: 'center', margin: spacing.scale(2)}}>
                             <h2>Table of Contents</h2>
                         </div>
-                        <SectionHeader part={1} title={'Dart'}/>
-                        <CategorySection sections={this.documentsByCategory(data.allStrapiTutorial.edges, 'Dart')}/>
-                        <SectionHeader part={2} title={'Flutter'}/>
-                        <CategorySection sections={this.documentsByCategory(data.allStrapiTutorial.edges, 'Flutter')}/>
-                    </TOCContainer>
+                        {Object.entries(this.fromJson(data.strapiTableOfContents.contents)).map(
+                            (category, index) => {
+                                return (
+                                    // {/*Top level is `Dart`, `Flutter`, `Flutter UI Example Apps`, etc*/}
+                                    <>
+                                        <SectionHeader
+                                            part={index + 1}
+                                            title={category[0]}
+                                        />
+                                        {/*
+                                        pass in list of all tutorials, which contain lessons
+                                        as well as an object of all the tutorials in this category
+                                        from the TOC. i.e.:
+                                            {
+                                                'Getting Started with Dart': [
+                                                    'About Dart'
+                                                    'Install Dart'
+                                                    ... etc ...
+                                                ],
+                                                'Dart Fundamentals': [
+                                                    'Values and Variables',
+                                                    'Comments'
+                                                    ...etc...
+                                                ],
+                                                ... etc ...
+                                            }
+                                        */}
+                                        <CategorySection
+                                            tutorials={this.documentsByCategory(data.allStrapiTutorial.edges, category[0])}
+                                            tocSubsection={category[1]}
+                                        />
+                                    </>
+                                )
+                            })}
+                    </TOCContainer>)
+                }
                 }
             />
         );
@@ -44,14 +79,21 @@ query TableOfContentsQuery {
         id
         title
         category
+        author {
+          username
+        }
         lessons {
           title
-          author
           id
           slug
+          created_at
         }
       }
     }
   }
+  strapiTableOfContents {
+    contents
+  }
 }
+
 `

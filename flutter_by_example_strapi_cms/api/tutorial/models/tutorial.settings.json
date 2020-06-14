@@ -20,7 +20,13 @@
       ]
     },
     "lessons": {
-      "collection": "lesson"
+      "collection": "lesson",
+      "via": "tutorial"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tutorials"
     }
   }
 }

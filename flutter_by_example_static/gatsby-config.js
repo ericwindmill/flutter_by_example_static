@@ -28,6 +28,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         contentTypes: [`tutorial`, `lesson`, `user`, `tag`, `blog-post`],
+        singleTypes: [`table-of-contents`],
         queryLimit: 1000,
       },
     },

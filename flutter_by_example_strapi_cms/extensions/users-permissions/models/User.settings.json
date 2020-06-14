@@ -60,6 +60,10 @@
     "lessons": {
       "via": "author",
       "collection": "lesson"
+    },
+    "tutorials": {
+      "via": "author",
+      "collection": "tutorial"
     }
   }
 }

@@ -23,6 +23,10 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "tutorial": {
+      "via": "lessons",
+      "model": "tutorial"
     }
   }
 }
