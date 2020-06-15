@@ -15,7 +15,7 @@ class TutorialLessonList extends React.Component {
                         <li key={lesson.id}
                             style={{margin: 0, padding: 0,}}
                         >
-                            <Link to={lesson.slug}>
+                            <Link to={`lesson/${lesson.slug}`}>
                                 {lesson.title}
                             </Link>
                         </li>

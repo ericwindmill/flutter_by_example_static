@@ -1,66 +1,81 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const {createFilePath} = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = ({graphql, actions}) => {
+    const {createPage} = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
-    `
-      {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
+    const tutorialPageTemplate = path.resolve(`./src/templates/blog-post.js`);
+    const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
+
+    return graphql(
+        `
+{
+  allStrapiTutorial {
+    edges {
+      node {
+        author {
+          email
+          username
+          id
+        }
+        category
+        created_at
+        id
+        strapiId
+        title
+        updated_at
+        lessons {
+          author
+          content
+          created_at
+          id
+          slug
+          title
+          tutorial
+          updated_at
+        }
+        internal {
+          type
         }
       }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
     }
-
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
-
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
-
-      createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
-
-    return null
-  })
+  }
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+    `
+    ).then(result => {
+        if (result.errors) {
+            throw result.errors
+        }
 
-  if (node.internal.type === `Mdx`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
+        // Create lesson pages
+        const tutorials = result.data.allStrapiTutorial.edges;
+        tutorials.forEach((tutorial, index) => {
+          const lessons = tutorial.node.lessons;
+          lessons.forEach((lesson, index) => {
+            createPage({
+              path: `lesson/${lesson.slug}`,
+              component: tutorialPageTemplate,
+              context: {
+                slug: lesson.slug,
+              },
+            })
+          })
+        });
+
+
+        return null
     })
-  }
+}
+
+exports.onCreateNode = ({node, actions, getNode}) => {
+    const {createNodeField} = actions;
+    if (node.path.includes('/lesson/')) {
+        const value = createFilePath({node, getNode});
+        createNodeField({
+            name: `slug`,
+            node,
+            value,
+        })
+    }
 }
