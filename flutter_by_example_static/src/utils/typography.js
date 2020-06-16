@@ -9,12 +9,12 @@ Wordpress2012.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     "h1": {
-      fontSize: `40px`,
+      fontSize: `34px`,
       margin: 0,
       lineHeight: 2,
     },
     "h2": {
-      fontSize: `24px`,
+      fontSize: `26px`,
       margin: 0,
     },
     "a": {

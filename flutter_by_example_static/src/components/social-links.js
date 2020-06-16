@@ -12,16 +12,16 @@ class SocialLinks extends React.Component {
                    <p>Elsewhere:</p>
                </ListItem>
                 <ListItem>
-                   <Link to={'https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/'}>YouTube Channel</Link>
+                   <a href={'https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/'}>YouTube Channel</a>
                 </ListItem>
                 <ListItem>
-                   <Link to={'https://twitter.com/ericwindmill'}>Twitter</Link>
+                   <a href={'https://twitter.com/ericwindmill'}>Twitter</a>
                 </ListItem>
                 <ListItem>
-                   <Link to={'https://github.com/ericwindmill/flutter_by_example_static'}>Github</Link>
+                   <a href={'https://github.com/ericwindmill/flutter_by_example_static'}>Github</a>
                </ListItem>
                 <ListItem>
-                    <Link to={'https://www.manning.com/books/flutter-in-action'}>Book</Link>
+                    <a href={'https://www.manning.com/books/flutter-in-action'}>Book</a>
                 </ListItem>
             </SocialLinkList>
         );

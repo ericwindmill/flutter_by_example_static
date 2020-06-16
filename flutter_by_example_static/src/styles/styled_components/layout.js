@@ -16,7 +16,6 @@ export const MainContentWrapper = styled.div`
     align-items: center;
     
     > * {
-        padding: ${spacing.scale(2.5)};
         width: 800px;
     }
     

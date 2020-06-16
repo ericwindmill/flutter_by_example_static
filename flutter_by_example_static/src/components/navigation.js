@@ -19,7 +19,7 @@ class Navigation extends React.Component {
                         <Link to={'/blog'}>Blog</Link>
                     </NavListItem>
                     <NavListItem>
-                        <Link to={'https://www.manning.com/books/flutter-in-action'}>Book</Link>
+                        <a href={'https://www.manning.com/books/flutter-in-action'}>Book</a>
                     </NavListItem>
                 </NavList>
             </nav>
