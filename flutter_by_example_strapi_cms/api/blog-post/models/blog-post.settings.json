@@ -13,9 +13,9 @@
       "type": "string"
     },
     "user": {
+      "via": "blog_posts",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "blog_posts"
+      "model": "user"
     },
     "content": {
       "type": "richtext"

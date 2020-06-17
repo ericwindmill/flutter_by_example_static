@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="323e059d-7bb9-4190-9962-3e00621df4ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/blog-post/models/blog-post.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/blog-post/models/blog-post.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/lesson/models/lesson.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/lesson/models/lesson.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/tutorial/models/tutorial.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/tutorial/models/tutorial.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/extensions/users-permissions/models/User.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/extensions/users-permissions/models/User.settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +85,7 @@
       <workItem from="1591631746891" duration="16683000" />
       <workItem from="1592153928652" duration="8257000" />
       <workItem from="1592232637562" duration="4318000" />
-      <workItem from="1592318501699" duration="4194000" />
+      <workItem from="1592318501699" duration="6141000" />
     </task>
     <servers />
   </component>

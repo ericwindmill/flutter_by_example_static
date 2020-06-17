@@ -13,9 +13,9 @@
       "type": "string"
     },
     "author": {
+      "via": "lessons",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "lessons"
+      "model": "user"
     },
     "content": {
       "type": "richtext"

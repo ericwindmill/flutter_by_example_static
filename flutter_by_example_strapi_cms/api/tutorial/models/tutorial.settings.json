@@ -24,9 +24,9 @@
       "via": "tutorial"
     },
     "author": {
+      "via": "tutorials",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "tutorials"
+      "model": "user"
     }
   }
 }
