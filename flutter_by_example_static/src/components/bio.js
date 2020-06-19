@@ -15,7 +15,6 @@ class Bio extends React.Component {
 
     render() {
         const {author} = this.props;
-        console.log(author);
         return (
             <Container>
                 <Image
