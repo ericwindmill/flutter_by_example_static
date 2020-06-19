@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {spacing} from "../spacing";
 
 export const FullWidthContentWrapper = styled.div`
     width: 100vw; 

@@ -6,7 +6,7 @@ import {colors} from "../../styles/colors";
 
 class TutorialLessonList extends React.Component {
     render() {
-        const {lessons, tutorialTitle, authorName, lessonsSubToc} = this.props;
+        const {lessons, tutorialTitle, authorName} = this.props;
         return (
             <div style={{margin: `${spacing.scale(2)} 0`}}>
                 <div style={{

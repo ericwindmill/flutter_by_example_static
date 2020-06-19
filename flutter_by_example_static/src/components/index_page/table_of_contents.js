@@ -1,5 +1,5 @@
 import React from "react";
-import {StaticQuery, Link, graphql} from 'gatsby';
+import {StaticQuery, graphql} from 'gatsby';
 import {TOCContainer} from "../../styles/styled_components/table_of_contents";
 import SectionHeader from "./section-header";
 import {spacing} from "../../styles/spacing";

@@ -6,63 +6,43 @@
  */
 
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
-import { rhythm } from "../utils/typography"
+import {rhythm} from "../utils/typography"
 
-function Bio() {
-  return (
-    <StaticQuery
-      query={bioQuery}
-      render={data => {
-        const { author, social } = data.site.siteMetadata
+class Bio extends React.Component {
+
+    render() {
+        const {author} = this.props;
+        console.log(author);
         return (
-          <Container>
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
-            </p>
-          </Container>
-        )
-      }}
-    />
-  )
-}
+            <Container>
+                <Image
+                    fluid={author.profile_image.childImageSharp.fluid}
+                    alt={author.username}
+                    style={{
+                        marginRight: rhythm(1 / 2),
+                        marginBottom: 0,
+                        minWidth: 50,
+                        borderRadius: `100%`,
+                    }}
+                    imgStyle={{
+                        borderRadius: `50%`,
+                    }}
+                />
+                <p>
+                    Written by <strong>{author.username}</strong>.
+                    {` `}
+                    <a href={`https://twitter.com/${author.twitter}`}>
+                        You should follow him on Twitter
+                    </a>
+                </p>
+            </Container>
 
-const bioQuery = graphql`
-  query BioQuery {
-      strapiUser {
-    profile_image {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          originalImg
-        }
-      }
+        )
     }
-    email
-    username
-  }
-  }
-`
+}
 
 const Container = styled.div`
   display: flex;

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="323e059d-7bb9-4190-9962-3e00621df4ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/blog-post/models/blog-post.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/blog-post/models/blog-post.settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/lesson/models/lesson.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/lesson/models/lesson.settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/tutorial/models/tutorial.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/api/tutorial/models/tutorial.settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/extensions/users-permissions/models/User.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/extensions/users-permissions/models/User.settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,8 @@
       <workItem from="1591631746891" duration="16683000" />
       <workItem from="1592153928652" duration="8257000" />
       <workItem from="1592232637562" duration="4318000" />
-      <workItem from="1592318501699" duration="6141000" />
+      <workItem from="1592318501699" duration="6779000" />
+      <workItem from="1592580783257" duration="3579000" />
     </task>
     <servers />
   </component>
@@ -119,15 +117,15 @@
     </state>
     <state x="1101" y="539" key="SettingsEditor/0.0.3200.1800@0.0.3200.1800" timestamp="1591462850295" />
     <state x="1101" y="555" key="SettingsEditor/0.23.3200.1777@0.23.3200.1777" timestamp="1592161540458" />
-    <state x="1030" y="552" width="1140" height="720" key="find.popup" timestamp="1592157202643">
+    <state x="1030" y="552" width="1140" height="720" key="find.popup" timestamp="1592581633783">
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state x="618" y="357" width="684" height="486" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1591987304365" />
-    <state x="1030" y="552" width="1140" height="720" key="find.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1592157202643" />
-    <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup" timestamp="1592321871007">
+    <state x="1030" y="552" width="1140" height="720" key="find.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1592581633783" />
+    <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup" timestamp="1592584035481">
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup/0.0.3200.1800@0.0.3200.1800" timestamp="1592233375997" />
-    <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1592321871007" />
+    <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1592584035481" />
   </component>
 </project>

@@ -11,7 +11,7 @@ export const spacing = {
     },
     scale: (scale) => {
         if (scale % .5 !== 0) {
-            throw 'scale must be multiple of 5'
+            console.log('invalid scale number')
         }
         return `${10 * scale}px`
     },

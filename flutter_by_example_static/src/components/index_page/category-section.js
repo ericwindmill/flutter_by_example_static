@@ -10,26 +10,6 @@ class CategorySection extends React.Component {
     }
 
     render() {
-        {/*
-         tocSubsection is from the table of contents. It's ToC metadata, used for ordering
-          for example:
-          tocSubsection = {
-                 'Getting Started with Dart': [
-                     'About Dart'
-                     'Install Dart'
-                     ... etc ...
-                 ],
-                 'Dart Fundamentals': [
-                     'Values and Variables',
-                     'Comments'
-                     ...etc...
-                 ],
-                 ... etc ...
-             }
-
-            tutorials are the documents from the CMS themselves.
-       */
-        }
         const {tutorials, tocSubsection} = this.props;
         return (
             Object.entries(tocSubsection).map((tutorialToc, index) => {

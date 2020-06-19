@@ -51,16 +51,16 @@ exports.createPages = ({graphql, actions}) => {
         // Create lesson pages
         const tutorials = result.data.allStrapiTutorial.edges;
         tutorials.forEach((tutorial, index) => {
-          const lessons = tutorial.node.lessons;
-          lessons.forEach((lesson, index) => {
-            createPage({
-              path: `lesson/${lesson.slug}`,
-              component: tutorialPageTemplate,
-              context: {
-                slug: lesson.slug,
-              },
+            const lessons = tutorial.node.lessons;
+            lessons.forEach((lesson, index) => {
+                createPage({
+                    path: `lesson/${lesson.slug}`,
+                    component: tutorialPageTemplate,
+                    context: {
+                        slug: lesson.slug,
+                    },
+                })
             })
-          })
         });
 
 
@@ -78,4 +78,32 @@ exports.onCreateNode = ({node, actions, getNode}) => {
             value,
         })
     }
+}
+
+exports.createResolvers = ({
+                               actions,
+                               cache,
+                               createNodeId,
+                               createResolvers,
+                               store,
+                               reporter,
+                           }) => {
+    const {createNode} = actions
+    createResolvers({
+        StrapiAuthor: {
+            profile_image: {
+                type: `File`,
+                resolve(source, args, context, info) {
+                    return createRemoteFileNode({
+                        url: `${source.url}`, // for S3 upload. For local: `http://localhost:1337${source.url}`,
+                        store,
+                        cache,
+                        createNode,
+                        createNodeId,
+                        reporter,
+                    })
+                },
+            },
+        },
+    })
 }

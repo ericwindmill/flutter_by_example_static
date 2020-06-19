@@ -6,7 +6,6 @@ import {FullWidthContentWrapper, MainContentWrapper, Wrapper} from "../styles/st
 import Image from "gatsby-image";
 import {graphql, StaticQuery} from "gatsby";
 import {spacing} from "../styles/spacing";
-import {colors} from "../styles/colors";
 
 class Layout extends React.Component {
     render() {

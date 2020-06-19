@@ -1,10 +1,10 @@
 import React from "react"
-import {Link, graphql} from "gatsby"
+import { graphql} from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {rhythm, scale} from "../utils/typography"
+import {rhythm} from "../utils/typography"
 import ReactMarkdown from "react-markdown/with-html"
 import {MainContentWrapper} from "../styles/styled_components/layout";
 
@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
                             marginBottom: rhythm(1),
                         }}
                     />
-                    <Bio/>
+                    <Bio author={post.author}/>
                 </MainContentWrapper>
             </Layout>
         )
@@ -55,6 +55,14 @@ export const pageQuery = graphql`
     author {
       email
       username
+      twitter
+      profile_image {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
+      }
     }
     content
     updated_at(formatString: "dddd, Do of MMMM, YYYY")

@@ -49,8 +49,8 @@ class Footer extends React.Component {
                         <div style={{width: 800, margin: "100px auto 0", padding: "25px 0", borderTop: `1px solid ${colors.white}`,}}>
                             <ul style={{listStyle: 'none', display: 'flex'}}>
                                 <li style={{margin: 0}}>&copy; 2018-2020 Eric Windmill</li>
-                                <li><a href="">about the project</a></li>
-                                <li><a href="">contact us</a></li>
+                                <li><a href="https://github.com/ericwindmill/flutter_by_example_static">about the project (readme)</a></li>
+                                <li><a href="mailto:eric@ericwindmill.com">contact us</a></li>
                             </ul>
                         </div>
                     </div>
