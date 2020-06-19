@@ -1,8 +1,8 @@
-const path = require(`path`)
-const {createFilePath} = require(`gatsby-source-filesystem`)
+const path = require(`path`);
+const {createFilePath, createRemoteFileNode} = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({graphql, actions}) => {
-    const {createPage} = actions
+    const {createPage} = actions;
 
     const tutorialPageTemplate = path.resolve(`./src/templates/blog-post.js`);
     const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
@@ -80,17 +80,10 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     }
 }
 
-exports.createResolvers = ({
-                               actions,
-                               cache,
-                               createNodeId,
-                               createResolvers,
-                               store,
-                               reporter,
-                           }) => {
-    const {createNode} = actions
+exports.createResolvers = ({actions, cache, createNodeId, createResolvers, store, reporter}) => {
+    const {createNode} = actions;
     createResolvers({
-        StrapiAuthor: {
+        StrapiAuthorProfileImage: {
             profile_image: {
                 type: `File`,
                 resolve(source, args, context, info) {

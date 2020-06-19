@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import {rhythm} from "../utils/typography"
 import ReactMarkdown from "react-markdown/with-html"
 import {MainContentWrapper} from "../styles/styled_components/layout";
+import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
+import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -33,13 +35,18 @@ class BlogPostTemplate extends React.Component {
                         on {post.updated_at}
                     </p>
                     </div>
-                    <ReactMarkdown source={post.content} escapeHtml={false}/>
+                    <BlogPostStyleWrapper>
+                        <ReactMarkdown source={post.content} escapeHtml={false} renderers={{code: MarkdownSyntaxHighlighter}}/>
+                    </BlogPostStyleWrapper>
                     <hr
                         style={{
                             marginBottom: rhythm(1),
                         }}
                     />
-                    <Bio author={post.author}/>
+                    <div style={{marginBottom: 20}}>
+                        <Bio author={post.author}/>
+                    </div>
+
                 </MainContentWrapper>
             </Layout>
         )

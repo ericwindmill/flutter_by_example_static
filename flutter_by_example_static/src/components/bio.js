@@ -26,6 +26,7 @@ class Bio extends React.Component {
                         marginBottom: 0,
                         minWidth: 50,
                         borderRadius: `100%`,
+                        width: 75,
                     }}
                     imgStyle={{
                         borderRadius: `50%`,
@@ -35,7 +36,7 @@ class Bio extends React.Component {
                     Written by <strong>{author.username}</strong>.
                     {` `}
                     <a href={`https://twitter.com/${author.twitter}`}>
-                        You should follow him on Twitter
+                        You should follow him on Twitter.
                     </a>
                 </p>
             </Container>
@@ -46,6 +47,7 @@ class Bio extends React.Component {
 
 const Container = styled.div`
   display: flex;
+  align-items: center;
 `
 
 export default Bio
