@@ -77,7 +77,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <script type="text/javascript" src="../utils/dartpad.js" defer/>
+    </Helmet>
   )
 }
 

@@ -70,6 +70,7 @@ exports.createPages = ({graphql, actions}) => {
 
 exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
+    console.log(node.path);
     if (node.path.includes('/lesson/')) {
         const value = createFilePath({node, getNode});
         createNodeField({
@@ -80,23 +81,23 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     }
 }
 
-exports.createResolvers = ({actions, cache, createNodeId, createResolvers, store, reporter}) => {
-    const {createNode} = actions;
-    createResolvers({
-        StrapiAuthorProfileImage: {
-            profile_image: {
-                type: `File`,
-                resolve(source, args, context, info) {
-                    return createRemoteFileNode({
-                        url: `${source.url}`, // for S3 upload. For local: `http://localhost:1337${source.url}`,
-                        store,
-                        cache,
-                        createNode,
-                        createNodeId,
-                        reporter,
-                    })
-                },
-            },
-        },
-    })
-}
+// exports.createResolvers = ({actions, cache, createNodeId, createResolvers, store, reporter}) => {
+//     const {createNode} = actions;
+//     createResolvers({
+//         StrapiLessonAuthor: {
+//             avatarImage: {
+//                 type: `File`,
+//                 resolve(source, args, context, info) {
+//                     return createRemoteFileNode({
+//                         url: `${source.url}`, // for S3 upload. For local: `http://localhost:1337${source.url}`,
+//                         store,
+//                         cache,
+//                         createNode,
+//                         createNodeId,
+//                         reporter,
+//                     })
+//                 },
+//             },
+//         },
+//     })
+// }

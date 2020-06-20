@@ -12,7 +12,7 @@ import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 
 class BlogPostTemplate extends React.Component {
     render() {
-        const post = this.props.data.strapiLesson
+        const post = this.props.data.strapiLesson;
         // const { previous, next } = this.props.pageContext // todo
 
         return (
@@ -43,10 +43,6 @@ class BlogPostTemplate extends React.Component {
                             marginBottom: rhythm(1),
                         }}
                     />
-                    <div style={{marginBottom: 20}}>
-                        <Bio author={post.author}/>
-                    </div>
-
                 </MainContentWrapper>
             </Layout>
         )
@@ -64,10 +60,10 @@ export const pageQuery = graphql`
       username
       twitter
       profile_image {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid_withWebp
-            }
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
