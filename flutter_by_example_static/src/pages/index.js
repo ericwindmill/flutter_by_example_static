@@ -12,7 +12,7 @@ import MailChimp from "../components/mail-chimp";
 
 class IndexPage extends React.Component {
     render() {
-        const siteTitle = "Gatsby Starter Personal Website"
+        const siteTitle = "Gatsby Starter Personal Website";
 
         return (
             <Layout location={this.props.location} title={siteTitle}>

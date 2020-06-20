@@ -54,8 +54,8 @@
       "configurable": false
     },
     "blog_posts": {
-      "collection": "blog-post",
-      "via": "user"
+      "via": "user",
+      "collection": "blog-post"
     },
     "lessons": {
       "collection": "lesson",
