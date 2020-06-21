@@ -42,9 +42,8 @@
   <component name="ChangeListManager">
     <list default="true" id="323e059d-7bb9-4190-9962-3e00621df4ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,8 @@
       <workItem from="1592232637562" duration="4318000" />
       <workItem from="1592318501699" duration="6779000" />
       <workItem from="1592580783257" duration="9101000" />
-      <workItem from="1592768037849" duration="2900000" />
+      <workItem from="1592768037849" duration="3105000" />
+      <workItem from="1592775324467" duration="462000" />
     </task>
     <servers />
   </component>
@@ -136,6 +136,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1968" y="577" key="#Web_Browsers" timestamp="1592154470186">
