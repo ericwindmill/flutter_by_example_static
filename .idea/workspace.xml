@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:flutter_by_example_strapi_cms" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="323e059d-7bb9-4190-9962-3e00621df4ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_by_example_strapi_cms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,25 +68,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectId" id="1cUrxmjuxnxts5cmzHomxJdRu2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -83,21 +119,34 @@
       <workItem from="1592232637562" duration="4318000" />
       <workItem from="1592318501699" duration="6779000" />
       <workItem from="1592580783257" duration="9101000" />
+      <workItem from="1592768037849" duration="2900000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="1968" y="577" key="#Web_Browsers" timestamp="1592154470186">
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state x="1968" y="577" key="#Web_Browsers/0.23.3200.1777@0.23.3200.1777" timestamp="1592154470186" />
-    <state x="1147" y="630" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592164869380">
-      <screen x="0" y="23" width="3200" height="1777" />
+    <state x="1147" y="603" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592774976775">
+      <screen x="0" y="23" width="3200" height="1697" />
     </state>
     <state x="688" y="410" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1591980991040" />
+    <state x="1147" y="603" key="#com.intellij.fileTypes.FileTypeChooser/0.23.3200.1697@0.23.3200.1697" timestamp="1592774976775" />
     <state x="1147" y="630" key="#com.intellij.fileTypes.FileTypeChooser/0.23.3200.1777@0.23.3200.1777" timestamp="1592164869380" />
     <state x="1288" y="643" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591462571311">
       <screen x="0" y="0" width="3200" height="1800" />
@@ -127,11 +176,12 @@
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state width="239" height="457" key="HiddenNamespacesPopup/0.23.3200.1777@0.23.3200.1777" timestamp="1592164840189" />
-    <state x="1101" y="555" key="SettingsEditor" timestamp="1592161540458">
-      <screen x="0" y="23" width="3200" height="1777" />
+    <state x="1321" y="639" key="SettingsEditor" timestamp="1592768233522">
+      <screen x="0" y="23" width="3840" height="2057" />
     </state>
     <state x="1101" y="539" key="SettingsEditor/0.0.3200.1800@0.0.3200.1800" timestamp="1591462850295" />
     <state x="1101" y="555" key="SettingsEditor/0.23.3200.1777@0.23.3200.1777" timestamp="1592161540458" />
+    <state x="1321" y="639" key="SettingsEditor/0.23.3840.2057@0.23.3840.2057" timestamp="1592768233522" />
     <state x="1030" y="552" width="1140" height="720" key="find.popup" timestamp="1592581633783">
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
@@ -141,10 +191,11 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1592587405771" />
-    <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup" timestamp="1592584035481">
-      <screen x="0" y="23" width="3200" height="1777" />
+    <state x="2460" y="505" width="804" height="774" key="search.everywhere.popup" timestamp="1592768225851">
+      <screen x="0" y="23" width="3840" height="2057" />
     </state>
     <state x="2050" y="421" width="670" height="676" key="search.everywhere.popup/0.0.3200.1800@0.0.3200.1800" timestamp="1592233375997" />
     <state x="2050" y="439" width="670" height="668" key="search.everywhere.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1592584035481" />
+    <state x="2460" y="505" width="804" height="774" key="search.everywhere.popup/0.23.3840.2057@0.23.3840.2057" timestamp="1592768225851" />
   </component>
 </project>
