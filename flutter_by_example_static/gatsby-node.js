@@ -4,7 +4,7 @@ const {createFilePath, createRemoteFileNode} = require(`gatsby-source-filesystem
 exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
 
-    const tutorialPageTemplate = path.resolve(`./src/templates/blog-post.js`);
+    const tutorialPageTemplate = path.resolve(`./src/templates/lesson-post.js`);
     const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
 
     return graphql(
@@ -40,7 +40,24 @@ exports.createPages = ({graphql, actions}) => {
       }
     }
   }
+  allStrapiBlogPost {
+    edges {
+      node {
+        slug
+        title
+        user {
+          twitter
+          username
+          email
+        }
+        content
+        id
+        created_at
+      }
+    }
+  }
 }
+
 
     `
     ).then(result => {
@@ -63,7 +80,18 @@ exports.createPages = ({graphql, actions}) => {
             })
         });
 
-
+        // Create blog post page
+        const posts = result.data.allStrapiBlogPost.edges;
+        posts.forEach((postEdge, index) => {
+           const post = postEdge.node;
+           createPage({
+               path: `blog/${post.slug}`,
+               component: blogPostTemplate,
+               context: {
+                   slug: post.slug,
+               }
+           });
+        });
         return null
     })
 }
@@ -72,6 +100,14 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
     console.log(node.path);
     if (node.path.includes('/lesson/')) {
+        const value = createFilePath({node, getNode});
+        createNodeField({
+            name: `slug`,
+            node,
+            value,
+        })
+    }
+    if (node.path.includes('/blog/')) {
         const value = createFilePath({node, getNode});
         createNodeField({
             name: `slug`,

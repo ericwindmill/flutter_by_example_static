@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql} from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {rhythm} from "../utils/typography"
@@ -53,28 +51,20 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    strapiLesson(slug: { eq: $slug } ) {
+    strapiBlogPost(slug: { eq: $slug } ) {
     id
-    author {
+    user {
       email
       username
       twitter
-      profile_image {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
     content
     updated_at(formatString: "dddd, Do of MMMM, YYYY")
     slug
     strapiId
     title
-    tutorial {
-      category
-      title
+    tags {
+     title
     }
   }
 }

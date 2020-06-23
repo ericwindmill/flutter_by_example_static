@@ -24,7 +24,7 @@ class BlogIndexPage extends React.Component {
                             return (
                                 <ul style={{listStyle: 'none'}}>
                                 {posts.map((post, index) => (
-                                    <li style={{margin: "0 0 10px"}}>
+                                    <li style={{margin: "0 0 30px"}}>
                                     <PostItemContainer
                                         key={post.node.id}
                                         authorName={post.node.user.username}
@@ -60,7 +60,7 @@ query BlogIndex {
                     username
                     twitter
                 }
-                created_at
+                created_at(formatString: "dddd, Do of MMMM, YYYY")
             }
         }
         totalCount
