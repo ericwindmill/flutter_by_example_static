@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql} from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {rhythm} from "../utils/typography"
@@ -12,7 +10,7 @@ import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 
 class BlogPostTemplate extends React.Component {
     render() {
-        const post = this.props.data.strapiLesson
+        const post = this.props.data.strapiLesson;
         // const { previous, next } = this.props.pageContext // todo
 
         return (
@@ -43,10 +41,6 @@ class BlogPostTemplate extends React.Component {
                             marginBottom: rhythm(1),
                         }}
                     />
-                    <div style={{marginBottom: 20}}>
-                        <Bio author={post.author}/>
-                    </div>
-
                 </MainContentWrapper>
             </Layout>
         )
@@ -57,28 +51,20 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    strapiLesson(slug: { eq: $slug } ) {
+    strapiBlogPost(slug: { eq: $slug } ) {
     id
-    author {
+    user {
       email
       username
       twitter
-      profile_image {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid_withWebp
-            }
-        }
-      }
     }
     content
     updated_at(formatString: "dddd, Do of MMMM, YYYY")
     slug
     strapiId
     title
-    tutorial {
-      category
-      title
+    tags {
+     title
     }
   }
 }

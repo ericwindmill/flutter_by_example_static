@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+=======
+{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","webpackCompilationHash":"","result":{"data":{"allSitePage":{"nodes":[{"path":"/lesson/about-dart"},{"path":"/lesson/installing-dart-on-your-machine"},{"path":"/lesson/dartpad"},{"path":"/lesson/text-editors-intellij-and-vs-code"},{"path":"/lesson/resources-documentation-and-pub-dev"},{"path":"/lesson/hello-world"},{"path":"/lesson/the-main-function"},{"path":"/lesson/print-to-the-console"},{"path":"/blog/test-one-two"},{"path":"/blog/writing-flutter-in-action-for-manning"},{"path":"/404/"},{"path":"/blog/"},{"path":"/contributors/"},{"path":"/"},{"path":"/404.html"}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+>>>>>>> 6feb317888f62d121173a945a0e2c157f40503a6

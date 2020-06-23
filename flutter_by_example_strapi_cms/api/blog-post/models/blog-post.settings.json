@@ -13,9 +13,9 @@
       "type": "string"
     },
     "user": {
-      "via": "blog_posts",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "blog_posts"
     },
     "content": {
       "type": "richtext"
@@ -25,6 +25,9 @@
       "targetField": "title",
       "required": true,
       "private": false
+    },
+    "tags": {
+      "collection": "tag"
     }
   }
 }
