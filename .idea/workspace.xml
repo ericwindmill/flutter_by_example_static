@@ -95,6 +95,23 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
+  <component name="RunManager">
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/flutter_by_example_strapi_cms/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -118,6 +135,7 @@
       <workItem from="1592580783257" duration="9101000" />
       <workItem from="1592768037849" duration="3105000" />
       <workItem from="1592775324467" duration="1510000" />
+      <workItem from="1592925570379" duration="2199000" />
     </task>
     <servers />
   </component>
@@ -141,6 +159,10 @@
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state x="1968" y="577" key="#Web_Browsers/0.23.3200.1777@0.23.3200.1777" timestamp="1592154470186" />
+    <state x="1850" y="387" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592927141316">
+      <screen x="0" y="23" width="3200" height="1697" />
+    </state>
+    <state x="1850" y="387" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.3200.1697@0.23.3200.1697" timestamp="1592927141316" />
     <state x="1147" y="603" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592774976775">
       <screen x="0" y="23" width="3200" height="1697" />
     </state>
@@ -155,6 +177,10 @@
       <screen x="0" y="0" width="3200" height="1800" />
     </state>
     <state x="2123" y="654" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3200.1800@0.0.3200.1800" timestamp="1591554787626" />
+    <state x="1712" y="510" key="#develop" timestamp="1592925931278">
+      <screen x="0" y="23" width="3200" height="1697" />
+    </state>
+    <state x="1712" y="510" key="#develop/0.23.3200.1697@0.23.3200.1697" timestamp="1592925931278" />
     <state width="1878" height="344" key="GridCell.Tab.0.bottom" timestamp="1592587662737">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

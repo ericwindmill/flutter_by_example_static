@@ -17,13 +17,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
@@ -37,35 +30,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-vscode`,
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
-        ],
       },
     },
     {
