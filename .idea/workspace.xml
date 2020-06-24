@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="323e059d-7bb9-4190-9962-3e00621df4ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flutter_by_example_strapi_cms/table_of_contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,7 @@
       <workItem from="1592232637562" duration="4318000" />
       <workItem from="1592318501699" duration="6779000" />
       <workItem from="1592580783257" duration="9366000" />
-      <workItem from="1592672690740" duration="11617000" />
+      <workItem from="1592672690740" duration="11947000" />
     </task>
     <servers />
   </component>
