@@ -1,10 +1,9 @@
 import React from "react";
-import styled from 'styled-components';
-import {rhythm, scale} from "../utils/typography";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import {graphql, StaticQuery} from "gatsby";
 import AuthorItemContainer from "../components/contributors_page/author-item-container";
+import {MainContentWrapper} from "../styles/styled_components/layout";
 
 class Contributors extends React.Component {
     render() {
@@ -14,16 +13,18 @@ class Contributors extends React.Component {
                     title={"Flutter by example contributors"}
                     description={"A list of the folks who contribute to flutter by example"}
                 />
-            <div>
-                <h1>Contributors</h1>
+            <MainContentWrapper>
+                <div style={{margin: '50px 0'}}>
+                    <h1 style={{fontSize: 45, margin: 0, padding: 0}}>Contributors</h1>
+                </div>
                 <StaticQuery
                     query={contributorsQuery}
                     render={data => {
                         const authors = data.allStrapiUser.edges;
                         return (
-                            <ul>
+                            <ul style={{listStyle: 'none'}}>
                                 {authors.map((author, index) => (
-                                    <li>
+                                    <li style={{padding: 0, margin: 0}}>
                                         <AuthorItemContainer
                                             key={author.node.id}
                                             author={author.node}
@@ -36,7 +37,8 @@ class Contributors extends React.Component {
 
                     }}
                 />
-            </div>
+                <div style={{margin: '50px 0'}} />
+            </MainContentWrapper>
             </Layout>
         );
     }
