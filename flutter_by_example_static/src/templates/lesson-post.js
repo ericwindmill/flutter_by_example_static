@@ -59,13 +59,6 @@ export const pageQuery = graphql`
       email
       username
       twitter
-      profile_image {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
     content
     updated_at(formatString: "dddd, Do of MMMM, YYYY")

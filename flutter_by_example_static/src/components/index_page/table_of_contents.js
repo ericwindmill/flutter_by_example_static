@@ -30,7 +30,7 @@ class TableOfContents extends React.Component {
                             (category, index) => {
                                 return (
                                     // {/*Top level is `Dart`, `Flutter`, `Flutter UI Example Apps`, etc*/}
-                                    <>
+                                    <div key={`category-key-${index}-${category[0]}`}>
                                         <SectionHeader
                                             part={index + 1}
                                             title={category[0]}
@@ -57,7 +57,7 @@ class TableOfContents extends React.Component {
                                             tutorials={this.documentsByCategory(data.allStrapiTutorial.edges, category[0])}
                                             tocSubsection={category[1]}
                                         />
-                                    </>
+                                    </div>
                                 )
                             })}
                     </TOCContainer>)

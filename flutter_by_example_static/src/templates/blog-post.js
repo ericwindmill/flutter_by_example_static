@@ -10,7 +10,7 @@ import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 
 class BlogPostTemplate extends React.Component {
     render() {
-        const post = this.props.data.strapiLesson;
+        const post = this.props.data.strapiBlogPost;
         // const { previous, next } = this.props.pageContext // todo
 
         return (

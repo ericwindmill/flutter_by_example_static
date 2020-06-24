@@ -4,8 +4,9 @@ import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 import {FullWidthContentWrapper, MainContentWrapper, Wrapper} from "../styles/styled_components/layout";
 import Image from "gatsby-image";
-import {graphql, StaticQuery} from "gatsby";
+import {graphql, StaticQuery, Link} from "gatsby";
 import {spacing} from "../styles/spacing";
+import {colors} from "../styles/colors";
 
 class Layout extends React.Component {
     render() {
@@ -47,7 +48,8 @@ class Layout extends React.Component {
         } else {
             header = (
                 <div>
-                    <div style={{
+                    <Link to={'/'}>
+                        <div style={{
                         borderBottom: "1px solid black",
                         alignItems: "center",
                         display: 'flex',
@@ -68,8 +70,9 @@ class Layout extends React.Component {
                                 )
                             }}
                         />
-                        <h1>Flutter by Example</h1>
+                        <h1 style={{color: `${colors.googleGrey600}`}}>Flutter by Example</h1>
                     </div>
+                    </Link>
                     <Navigation/>
                 </div>
             );

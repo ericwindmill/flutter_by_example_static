@@ -21,7 +21,7 @@ class TutorialLessonList extends React.Component {
                 <ul style={{listStyle: "none", display: 'flex', flexFlow: 'column wrap'}}>
                     {lessons.map(lesson => (
 
-                        <Link to={`lesson/${lesson.slug}`}>
+                        <Link key={`lesson-link-key-${lesson.id}`} to={`lesson/${lesson.slug}`}>
                             <LessonLink key={lesson.id}>{lesson.title}</LessonLink>
                         </Link>
 

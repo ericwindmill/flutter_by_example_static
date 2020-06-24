@@ -18,7 +18,7 @@ class PostItemContainer extends React.Component {
                     <h3>{authorName}</h3>
                     <p>{date}</p>
                 </BioSection>
-                <Link to={`blog/${slug}`}>
+                <Link to={`${slug}`}>
                     <h2 style={{fontSize: 40, margin: "20px 0", color: "black"}}>{title}</h2>
                 </Link>
                 <p style={{color: `${colors.googleGrey600}`, margin: "20px 0 0 0"}}>tags</p>

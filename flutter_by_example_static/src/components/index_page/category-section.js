@@ -17,7 +17,7 @@ class CategorySection extends React.Component {
                 let lessonTitlesForTutorial = tutorialToc[1];
                 let tutorialNode = this.tutorialNode(tutorialTitle, tutorials);
                 if (tutorialNode === undefined) {
-                    return <div />;
+                    return <div key={'_' + Math.random().toString(36).substr(2, 9)} />;
                 }
                 return <TutorialLessonList
                     key={tutorialNode.node.id}
