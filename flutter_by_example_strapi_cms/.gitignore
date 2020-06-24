@@ -110,3 +110,4 @@ coverage
 .env
 exports
 .cache
+package-lock.json
