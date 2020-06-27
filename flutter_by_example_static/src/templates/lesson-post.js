@@ -21,6 +21,8 @@ class BlogPostTemplate extends React.Component {
                     title={post.title}
                     description={post.content}
                 />
+                <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer></script>
+
                 <MainContentWrapper>
                     <div style={{margin: '50px 0'}}>
                     <h1 style={{fontSize: 45, margin: 0, padding: 0}}>{post.title}</h1>

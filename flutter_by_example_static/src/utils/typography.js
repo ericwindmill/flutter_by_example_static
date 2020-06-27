@@ -8,19 +8,25 @@ Wordpress2012.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "p": {
+      fontSize: `18px`,
+    },
     "h1": {
       fontSize: `34px`,
-      margin: 0,
-      lineHeight: 2,
     },
     "h2": {
       fontSize: `26px`,
-      margin: 0,
     },
-    "a": {
+    "h3": {
+      fontSize: `22px`,
+    },
+    "a, a:visited": {
       color: colors.flutterBlue,
       textDecoration: "none",
-    }
+    },
+    "a:hover": {
+      color: colors.primary,
+    },
 
   }
 }

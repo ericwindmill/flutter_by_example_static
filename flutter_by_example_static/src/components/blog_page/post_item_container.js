@@ -18,17 +18,17 @@ class PostItemContainer extends React.Component {
                     <h3>{authorName}</h3>
                     <p>{date}</p>
                 </BioSection>
-                <Link to={`${slug}`}>
+                <Link to={`/blog/${slug}`}>
                     <h2 style={{fontSize: 40, margin: "20px 0", color: "black"}}>{title}</h2>
                 </Link>
                 <p style={{color: `${colors.googleGrey600}`, margin: "20px 0 0 0"}}>tags</p>
                 <ul style={{listStyle: 'none'}}>
                     {tags && tags.map((tag) => {
                         return (
-                            <Link to={`/tags/${tag}`}><TagListItem>{tag}</TagListItem></Link>
+                            <Link to={`/tag/${tag}`}><TagListItem>{tag}</TagListItem></Link>
                         );
                     })}
-                    {tags || <Link to={`/tags/flutter`}><TagListItem>#flutter</TagListItem></Link>}
+                    {tags || <Link to={`/tag/flutter`}><TagListItem>#flutter</TagListItem></Link>}
                 </ul>
             </div>
         );

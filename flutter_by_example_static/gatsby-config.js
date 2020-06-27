@@ -58,5 +58,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: "https://dartpad.dev/experimental/inject_embed.dart.js"
+      },
+    }
   ],
 }

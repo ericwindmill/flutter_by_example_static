@@ -78,7 +78,8 @@ function SEO({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
-      <script type="text/javascript" src="../utils/dartpad.js" defer/>
+      <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" async></script>
+
     </Helmet>
   )
 }

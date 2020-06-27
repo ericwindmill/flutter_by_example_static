@@ -7,6 +7,8 @@ import ReactMarkdown from "react-markdown/with-html"
 import {MainContentWrapper} from "../styles/styled_components/layout";
 import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
 import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
+import Bio from "../components/bio";
+import AuthorItemContainer from "../components/contributors_page/author-item-container";
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -15,13 +17,14 @@ class BlogPostTemplate extends React.Component {
 
         return (
             <Layout location={this.props.location}>
+                <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer></script>
                 <SEO
                     title={post.title}
                     description={post.content}
                 />
                 <MainContentWrapper>
                     <div style={{margin: '50px 0'}}>
-                    <h1 style={{fontSize: 45, margin: 0, padding: 0}}>{post.title}</h1>
+                    <h1 style={{fontSize: 45, margin: "0 0 5px", padding: 0}}>{post.title}</h1>
                     <p
                         style={{
                             display: `block`,
@@ -30,7 +33,7 @@ class BlogPostTemplate extends React.Component {
                             padding: 0,
                         }}
                     >
-                        on {post.updated_at}
+                        {post.updated_at} by {post.user.username}
                     </p>
                     </div>
                     <BlogPostStyleWrapper>
@@ -41,6 +44,7 @@ class BlogPostTemplate extends React.Component {
                             marginBottom: rhythm(1),
                         }}
                     />
+                    <Bio author={post.user}/>
                 </MainContentWrapper>
             </Layout>
         )
@@ -57,6 +61,7 @@ export const pageQuery = graphql`
       email
       username
       twitter
+        bio
     }
     content
     updated_at(formatString: "dddd, Do of MMMM, YYYY")

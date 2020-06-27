@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {colors} from "../colors"
 
 export const FullWidthContentWrapper = styled.div`
     width: 100vw; 
@@ -16,9 +17,7 @@ export const MainContentWrapper = styled.div`
     
     > * {
         width: 800px;
-    }
-    
-                
+    }        
    
 `
 
@@ -28,4 +27,16 @@ export const Wrapper = styled.div`
    display: flex;
     flex-flow: column; 
     align-items: center;
+    
+    
+    blockquote {
+        border: 1px solid ${colors.primary};
+        border-radius: 5px;
+        margin: 50px 0;
+        
+        
+        * {
+            font-style: normal;
+        }    
+    }
 `

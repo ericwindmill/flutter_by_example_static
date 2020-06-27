@@ -13,7 +13,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-          <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer></script>
+        <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -27,7 +27,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script type="text/javascript" src="./utils/dartpad.js"/>
     </html>
   )
 }

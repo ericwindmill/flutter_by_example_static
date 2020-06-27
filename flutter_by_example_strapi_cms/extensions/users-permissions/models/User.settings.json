@@ -54,16 +54,16 @@
       "configurable": false
     },
     "blog_posts": {
-      "via": "user",
-      "collection": "blog-post"
+      "collection": "blog-post",
+      "via": "user"
     },
     "lessons": {
       "collection": "lesson",
       "via": "author"
     },
     "tutorials": {
-      "collection": "tutorial",
-      "via": "author"
+      "via": "author",
+      "collection": "tutorial"
     },
     "profile_image": {
       "model": "file",
@@ -78,6 +78,10 @@
     },
     "twitter": {
       "type": "string"
+    },
+    "bio": {
+      "type": "text",
+      "default": "An avid Flutter user!"
     }
   }
 }

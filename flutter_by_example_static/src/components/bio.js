@@ -10,6 +10,8 @@ import Image from "gatsby-image"
 import styled from "styled-components"
 
 import {rhythm} from "../utils/typography"
+import {colors} from "../styles/colors";
+import {spacing} from "../styles/spacing";
 
 class Bio extends React.Component {
 
@@ -17,27 +19,36 @@ class Bio extends React.Component {
         const {author} = this.props;
         return (
             <Container>
-                <Image
-                    fluid={author.profile_image.childImageSharp.fluid}
-                    alt={author.username}
-                    style={{
-                        marginRight: rhythm(1 / 2),
-                        marginBottom: 0,
-                        minWidth: 50,
-                        borderRadius: `100%`,
-                        width: 75,
-                    }}
-                    imgStyle={{
-                        borderRadius: `50%`,
-                    }}
-                />
-                <p>
-                    Written by <strong>{author.username}</strong>.
-                    {` `}
-                    <a href={`https://twitter.com/${author.twitter}`}>
-                        You should follow him on Twitter.
-                    </a>
-                </p>
+                <div style={{
+                    borderRadius: "100%",
+                    background: `${colors.dartPrimary}`,
+                    color: "white",
+                    width: 100,
+                    height: 100,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: `${spacing.scale(3)}`,
+                    marginRight: "50px",
+                }}>
+                    {author.username[0]}
+                </div>
+                <div>
+                    <h2 style={{margin: '0 0 10px 0'}}>{author.username}</h2>
+                    <p style={{margin: '10px 0 5px'}}>{author.bio}</p>
+                    <ul style={{display: 'flex', listStyle: 'none', margin: 0, padding: 0}}>
+                        <li style={{margin: 0}}>
+                            <a href={'/'} style={{lineHeight: 0, margin: 0, padding:0}}>
+                                @{author.twitter} on Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href={`mailto:${author.email}`}>
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </Container>
 
         )
@@ -47,6 +58,7 @@ class Bio extends React.Component {
 const Container = styled.div`
   display: flex;
   align-items: center;
+  margin: 50px 0;
 `
 
 export default Bio

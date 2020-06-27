@@ -4,6 +4,8 @@ import SEO from "../components/seo";
 import {graphql, StaticQuery} from "gatsby";
 import AuthorItemContainer from "../components/contributors_page/author-item-container";
 import {MainContentWrapper} from "../styles/styled_components/layout";
+import {colors} from "../styles/colors";
+import {spacing} from "../styles/spacing";
 
 class Contributors extends React.Component {
     render() {
@@ -24,9 +26,14 @@ class Contributors extends React.Component {
                         return (
                             <ul style={{listStyle: 'none'}}>
                                 {authors.map((author, index) => (
-                                    <li style={{padding: 0, margin: 0}}>
+                                    <li style={{
+                                        margin: 0,
+                                        border: `1px solid ${colors.googleGrey100}`,
+                                        padding: `${spacing.grid["2"]}px`,
+                                        borderRadius: 4,
+
+                                    }} key={`${author.node.id}`}>
                                         <AuthorItemContainer
-                                            key={author.node.id}
                                             author={author.node}
                                         />
                                     </li>
@@ -64,6 +71,7 @@ const contributorsQuery = graphql`
                     }
                     username
                     twitter
+                    bio
                 }
             }
         }

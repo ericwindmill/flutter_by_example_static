@@ -6,6 +6,7 @@ exports.createPages = ({graphql, actions}) => {
 
     const tutorialPageTemplate = path.resolve(`./src/templates/lesson-post.js`);
     const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
+    const tagsPageTemplate = path.resolve('./src/templates/tags-page.js');
 
     return graphql(
         `
@@ -56,6 +57,13 @@ exports.createPages = ({graphql, actions}) => {
       }
     }
   }
+   allStrapiTag {
+    edges {
+      node {
+        title
+      }
+    }
+  }
 }
 
 
@@ -92,13 +100,25 @@ exports.createPages = ({graphql, actions}) => {
                }
            });
         });
+
+        // create tags page
+        const tags = result.data.allStrapiTag.edges;
+        tags.forEach((tagEdge, index) => {
+           const tag = tagEdge.node;
+           createPage({
+               path: `tag/${tag.title}`,
+               component: tagsPageTemplate,
+               context: {
+                   tag: tag.title,
+               }
+           });
+        });
         return null
     })
 }
 
 exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
-    console.log(node.path);
     if (node.path.includes('/lesson/')) {
         const value = createFilePath({node, getNode});
         createNodeField({
@@ -108,6 +128,14 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         })
     }
     if (node.path.includes('/blog/')) {
+        const value = createFilePath({node, getNode});
+        createNodeField({
+            name: `slug`,
+            node,
+            value,
+        })
+    }
+    if (node.path.includes('/tag/')) {
         const value = createFilePath({node, getNode});
         createNodeField({
             name: `slug`,

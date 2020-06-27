@@ -8,18 +8,22 @@ class AuthorListOfArticles extends React.Component {
     render() {
         const {articles, tutorials} = this.props;
         return (
-            <div>
-              <p><strong>Contributions</strong></p>
-            <dl>
-                <dt>Articles</dt>
-                <dd>{articles.map((a, index) => {
-
-                })}</dd>
-                <dt>Tutorials</dt>
-                <dd>{tutorials.map((t, index) => {
-
-                })}</dd>
-            </dl>
+            <div style={{margin: "20px 0 "}}>
+                <h3 style={{margin: "10px 0"}}>Contributions</h3>
+                <p style={{margin:"10px 0"}}>Articles</p>
+                <ul>
+                    {articles.map((a, index) => {
+                        return <li key={`contributions-${a.title}-${index}`}>
+                           <Link to={`/blog/${a.slug}`}> {a.title} </Link>
+                        </li>
+                    })}
+                </ul>
+                <p style={{margin: "10px 0"}}>Tutorials</p>
+                <ul>
+                    {tutorials.map((t, index) => {
+                        return <li key={`contributions-${t.title}-${index}`}>{t.title}</li>
+                    })}
+                </ul>
             </div>
 
         )

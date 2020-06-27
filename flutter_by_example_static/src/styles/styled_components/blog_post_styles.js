@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const BlogPostStyleWrapper = styled.div`
-    p, li {
-        font-size: 20px;
-    }    
+    h1, h2, h3, h4, h5 {
+        margin: 30px 0;
+        line-height: 1;
+    }
     
-    p code {
-        font-size: 20px;
-        background-color: #f8f9fa;
-        padding: 0 5px;
+    p, li {
+        font-size: 18px;
+    }    
+    p {
+        margin: 20px 0;
     }
 `

@@ -1,7 +1,11 @@
 const codeBackgroundColor = "#f8f9fa";
 const codeDefaultColor = "#212529";
-const codeBlue = "#1b87c9"; // strings
-const codeTeal = "#1FBAAC"; // methods
+const codeBlue = "#00677a"; // methods
+const codePurple = "#7500A0"; // variables
+const codePink = '#BC0056'; // strings, class names
+const codeMutedPink = '#a54a78';
+const codeGrey = '#6E6E70'; //comments
+const codeGreen = '#007a27'; // keywords
 
 export default {
     "code[class*=\"language-\"]": {
@@ -91,28 +95,31 @@ export default {
         "color": "#4a5f78"
     },
     "cdata": {
-        "color": "#4a5f78"
+        "color": codePink
     },
     "punctuation": {
-        "color": "#4a5f78"
+        "color": codeDefaultColor,
     },
     "namespace": {
-        "Opacity": ".7"
+
     },
     "tag": {
         "color": "#0aa370"
     },
     "operator": {
-        "color": "#0aa370"
+        "color": codeDefaultColor
     },
     "number": {
-        "color": "#0aa370"
+        "color": codePink
     },
     "property": {
         "color": "#57718e"
     },
     "function": {
-        "color": "#57718e"
+        "color": codeBlue
+    },
+    "class-name": {
+        "color": codeMutedPink,
     },
     "tag-id": {
         "color": "#ebf4ff"
@@ -136,10 +143,10 @@ export default {
         "color": "#47ebb4"
     },
     "boolean": {
-        "color": "#47ebb4"
+        "color": codePink,
     },
     "string": {
-        "color": codeBlue
+        "color": codePink,
     },
     "entity": {
         "color": "#47ebb4",
@@ -149,19 +156,19 @@ export default {
         "color": "#47ebb4"
     },
     ".language-css .token.string": {
-        "color": "#47ebb4"
+        "color": codePink
     },
     ".language-scss .token.string": {
-        "color": "#47ebb4"
+        "color": codePink
     },
     ".style .token.string": {
-        "color": codeBlue,
+        "color": codePink,
     },
     "attr-value": {
         "color": "#47ebb4"
     },
     "keyword": {
-        "color": "#47ebb4"
+        "color": codeDefaultColor,
     },
     "control": {
         "color": "#47ebb4"
@@ -185,7 +192,7 @@ export default {
         "color": "#47ebb4"
     },
     "variable": {
-        "color": codeTeal,
+        "color": codePurple,
     },
     "deleted": {
         "textDecoration": "line-through"
