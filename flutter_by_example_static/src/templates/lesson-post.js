@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {rhythm} from "../utils/typography"
 import ReactMarkdown from "react-markdown/with-html"
+import styled from "styled-components";
 import {MainContentWrapper} from "../styles/styled_components/layout";
 import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
 import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
@@ -17,43 +18,51 @@ class BlogPostTemplate extends React.Component {
         // const { previous, next } = this.props.pageContext // todo
 
         return (
-            <Layout location={this.props.location}>
+            <Layout location={this.props.location} tutorialLessons={tutorialLessons} post={post} >
                 <SEO
                     title={post.title}
                     description={post.content}
                 />
                 <script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer></script>
-                <SideTableOfContents lessonNodes={tutorialLessons} tutorialTitle={post.tutorial.title}/>
-                <MainContentWrapper>
-                    <div style={{margin: '50px 0'}}>
-                        <h1 style={{fontSize: 45, margin: 0, padding: 0}}>{post.title}</h1>
-                        <p
+                <PageLayout>
+                    <MainContentWrapper>
+                        <div style={{margin: '50px 0'}}>
+                            <h1 style={{fontSize: 45, margin: 0, padding: 0}}>{post.title}</h1>
+                            <p
+                                style={{
+                                    display: `block`,
+                                    marginBottom: rhythm(1),
+                                    marginLeft: 0,
+                                    padding: 0,
+                                }}
+                            >
+                                on {post.updated_at}
+                            </p>
+                        </div>
+                        <BlogPostStyleWrapper>
+                            <ReactMarkdown source={post.content} escapeHtml={false}
+                                           renderers={{code: MarkdownSyntaxHighlighter}}/>
+                        </BlogPostStyleWrapper>
+                        <hr
                             style={{
-                                display: `block`,
                                 marginBottom: rhythm(1),
-                                marginLeft: 0,
-                                padding: 0,
                             }}
-                        >
-                            on {post.updated_at}
-                        </p>
-                    </div>
-                    <BlogPostStyleWrapper>
-                        <ReactMarkdown source={post.content} escapeHtml={false}
-                                       renderers={{code: MarkdownSyntaxHighlighter}}/>
-                    </BlogPostStyleWrapper>
-                    <hr
-                        style={{
-                            marginBottom: rhythm(1),
-                        }}
-                    />
-                </MainContentWrapper>
+                        />
+                    </MainContentWrapper>
+
+                </PageLayout>
             </Layout>
         )
     }
 }
 
 export default BlogPostTemplate
+
+const PageLayout = styled.div`
+    display: flex;
+    flex-flow: column; 
+    align-items: center;
+`
 
 export const pageQuery = graphql`
     query LessonPostBySlug($slug: String!, $tutorialTitle: String!) {

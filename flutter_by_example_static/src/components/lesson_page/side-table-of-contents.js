@@ -28,12 +28,12 @@ class SideTableOfContents extends React.Component {
 export default SideTableOfContents
 
 const ToCContainer = styled.div`
-    position: fixed;
     height: 100vh;
     width: 300px;
     background: white;
-    left: 0;
-    top: 0;
     padding: 20px;
-    border-right: 1px solid ${colors.googleGrey100};
+    border-left: 1px solid ${colors.googleGrey100};
+    position: fixed;
+    right: 0;
+    top: 0;
 `;

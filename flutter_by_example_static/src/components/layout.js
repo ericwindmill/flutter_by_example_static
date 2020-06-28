@@ -7,11 +7,14 @@ import Image from "gatsby-image";
 import {graphql, StaticQuery, Link} from "gatsby";
 import {spacing} from "../styles/spacing";
 import {colors} from "../styles/colors";
+import SideTableOfContents from "./lesson_page/side-table-of-contents";
 
 class Layout extends React.Component {
     render() {
-        const {location, children} = this.props;
+        const {location, tutorialLessons, post, children} = this.props;
         const rootPath = `${__PATH_PREFIX__}/`;
+        const isLessonPage = location.pathname.includes('/lesson/');
+
         let header;
         if (location.pathname === rootPath) {
             header = (
@@ -86,6 +89,12 @@ class Layout extends React.Component {
                 <FullWidthContentWrapper>
                     <Footer/>
                 </FullWidthContentWrapper>
+                {
+                    isLessonPage && <SideTableOfContents
+                        lessonNodes={tutorialLessons}
+                        tutorialTitle={post.tutorial.title}
+                    />
+                }
             </Wrapper>
         )
     }

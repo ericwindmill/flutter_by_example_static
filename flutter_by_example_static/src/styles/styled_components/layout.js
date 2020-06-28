@@ -10,14 +10,26 @@ export const FullWidthContentWrapper = styled.div`
 `
 
 export const MainContentWrapper = styled.div`
-     min-width: 1200px;
-   display: flex;
+
+    display: flex;
     flex-flow: column; 
     align-items: center;
     
     > * {
         width: 800px;
-    }        
+    }
+    
+    
+        blockquote {
+        border: 1px solid ${colors.primary};
+        border-radius: 5px;
+        margin: 50px 0;
+        
+        
+        * {
+            font-style: normal;
+        }    
+    }    
    
 `
 
@@ -27,16 +39,4 @@ export const Wrapper = styled.div`
    display: flex;
     flex-flow: column; 
     align-items: center;
-    
-    
-    blockquote {
-        border: 1px solid ${colors.primary};
-        border-radius: 5px;
-        margin: 50px 0;
-        
-        
-        * {
-            font-style: normal;
-        }    
-    }
 `
