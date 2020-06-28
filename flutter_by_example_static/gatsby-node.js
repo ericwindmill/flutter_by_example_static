@@ -83,6 +83,7 @@ exports.createPages = ({graphql, actions}) => {
                     component: tutorialPageTemplate,
                     context: {
                         slug: lesson.slug,
+                        tutorialTitle: tutorial.node.title
                     },
                 })
             })

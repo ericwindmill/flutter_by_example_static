@@ -1,8 +1,5 @@
 import React from "react"
 import {Link} from "gatsby"
-import styled from "styled-components"
-import {colors} from "../../styles/colors";
-import {spacing} from "../../styles/spacing";
 
 class AuthorListOfArticles extends React.Component {
     render() {

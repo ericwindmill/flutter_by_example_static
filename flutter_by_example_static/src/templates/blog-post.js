@@ -8,7 +8,6 @@ import {MainContentWrapper} from "../styles/styled_components/layout";
 import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
 import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 import Bio from "../components/bio";
-import AuthorItemContainer from "../components/contributors_page/author-item-container";
 
 class BlogPostTemplate extends React.Component {
     render() {

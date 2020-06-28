@@ -4,8 +4,8 @@ const codeBlue = "#00677a"; // methods
 const codePurple = "#7500A0"; // variables
 const codePink = '#BC0056'; // strings, class names
 const codeMutedPink = '#a54a78';
-const codeGrey = '#6E6E70'; //comments
-const codeGreen = '#007a27'; // keywords
+// const codeGrey = '#6E6E70'; //comments
+// const codeGreen = '#007a27'; // keywords
 
 export default {
     "code[class*=\"language-\"]": {
