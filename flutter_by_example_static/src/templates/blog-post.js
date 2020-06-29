@@ -7,12 +7,13 @@ import ReactMarkdown from "react-markdown/with-html"
 import {MainContentWrapper} from "../styles/styled_components/layout";
 import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
 import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
+import {Disqus} from "gatsby-plugin-disqus";
 import Bio from "../components/bio";
+import {siteMetadata} from "../../gatsby-config";
 
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.strapiBlogPost;
-        // const { previous, next } = this.props.pageContext // todo
 
         return (
             <Layout location={this.props.location}>
@@ -44,6 +45,16 @@ class BlogPostTemplate extends React.Component {
                         }}
                     />
                     <Bio author={post.user}/>
+                    <hr
+                        style={{
+                            marginBottom: rhythm(1),
+                        }}
+                    />
+                    <Disqus config={{
+                        url: `${siteMetadata.siteUrl}/blog/${post.slug}`,
+                        identifier: post.slug,
+                        title: post.title,
+                    }} />
                 </MainContentWrapper>
             </Layout>
         )

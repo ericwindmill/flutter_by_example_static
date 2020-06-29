@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql} from "gatsby"
+import {graphql, Link} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,13 +9,15 @@ import styled from "styled-components";
 import {MainContentWrapper} from "../styles/styled_components/layout";
 import {BlogPostStyleWrapper} from "../styles/styled_components/blog_post_styles";
 import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
-import SideTableOfContents from "../components/lesson_page/side-table-of-contents";
+import {Disqus} from "gatsby-plugin-disqus";
+import {siteMetadata} from "../../gatsby-config";
 
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.strapiLesson;
         const tutorialLessons = this.props.data.strapiTutorial;
-        // const { previous, next } = this.props.pageContext // todo
+        const { previous, next } = this.props.pageContext
+        console.log(this.props.pageContext);
 
         return (
             <Layout location={this.props.location} tutorialLessons={tutorialLessons} post={post} >
@@ -48,6 +50,39 @@ class BlogPostTemplate extends React.Component {
                                 marginBottom: rhythm(1),
                             }}
                         />
+                        <ul style={{
+                            listStyle: "none",
+                            display: "flex",
+                            justifyContent:"space-between"
+                        }}>
+                            <li style={{margin: 0, padding: 0}}>
+                                { previous != null ?
+                                    <div>
+                                        previous: <Link to={`/lesson/${previous.slug}`}>{previous.title}</Link>
+                                    </div>
+                                    : <div/>
+                                }
+                            </li>
+                            <li style={{margin: 0, padding: 0}}>
+                                { next != null ?
+                                    <div>
+                                        next: <Link to={`/lesson/${next.slug}`}>{next.title}</Link>
+                                    </div>
+
+                                    : <div/>
+                                }
+                            </li>
+                        </ul>
+                        <hr
+                            style={{
+                                marginBottom: rhythm(1),
+                            }}
+                        />
+                        <Disqus config={{
+                            url: `${siteMetadata.siteUrl}/lesson/${post.slug}`,
+                            identifier: post.slug,
+                            title: post.title,
+                        }} />
                     </MainContentWrapper>
 
                 </PageLayout>

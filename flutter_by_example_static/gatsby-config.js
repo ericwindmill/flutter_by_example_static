@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Flutter by Example`,
+    author: `Eric Windmill`,
+    description: `Tutorials about Dart and Flutter.`,
+    siteUrl: `https://flutterbyexample.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `ericwindmill`,
     },
   },
   plugins: [
@@ -35,8 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-156056355-1`,
       },
     },
     {
@@ -48,7 +47,6 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // edit below
         icon: `content/assets/gatsby-icon.png`,
       },
     },
@@ -62,7 +60,13 @@ module.exports = {
       resolve: 'gatsby-plugin-load-script',
       options: {
         src: "https://dartpad.dev/experimental/inject_embed.dart.js"
-      },
+      }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `flutterbyexample`
+      }
     }
   ],
 }

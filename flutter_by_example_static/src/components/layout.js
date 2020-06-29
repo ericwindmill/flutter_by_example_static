@@ -8,6 +8,7 @@ import {graphql, StaticQuery, Link} from "gatsby";
 import {spacing} from "../styles/spacing";
 import {colors} from "../styles/colors";
 import SideTableOfContents from "./lesson_page/side-table-of-contents";
+import "../styles/globals.css";
 
 class Layout extends React.Component {
     render() {

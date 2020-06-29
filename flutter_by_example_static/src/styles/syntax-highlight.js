@@ -223,5 +223,5 @@ export default {
     },
     ".line-highlight": {
         "background": "linear-gradient(to right, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0))"
-    }
+    },
 };

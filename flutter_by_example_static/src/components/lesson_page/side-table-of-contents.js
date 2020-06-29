@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {colors} from "../../styles/colors";
 import {Link} from "gatsby";
+import {device} from "../../styles/media";
 
 class SideTableOfContents extends React.Component {
 
@@ -34,6 +35,10 @@ const ToCContainer = styled.div`
     padding: 20px;
     border-left: 1px solid ${colors.googleGrey100};
     position: fixed;
-    right: 0;
+    right: -300px;
     top: 0;
+   
+    @media ${device.laptopL} { 
+        right: 0;
+    }
 `;

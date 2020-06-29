@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colors} from "../colors"
+import {device} from "../media";
 
 export const FullWidthContentWrapper = styled.div`
     width: 100vw; 
@@ -16,20 +16,12 @@ export const MainContentWrapper = styled.div`
     align-items: center;
     
     > * {
+        width: 600px;
+        
+    @media ${device.laptop} { 
         width: 800px;
     }
-    
-    
-        blockquote {
-        border: 1px solid ${colors.primary};
-        border-radius: 5px;
-        margin: 50px 0;
-        
-        
-        * {
-            font-style: normal;
-        }    
-    }    
+  }  
    
 `
 
