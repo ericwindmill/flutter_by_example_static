@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     // edit below
@@ -15,11 +19,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
+        apiURL: process.env.GATSBY_API_URL || "http://localhost:1337",
         contentTypes: [`tutorial`, `lesson`, `user`, `tag`, `blog-post`],
         singleTypes: [`table-of-contents`],
         queryLimit: 1000,
