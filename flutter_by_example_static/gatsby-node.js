@@ -126,6 +126,8 @@ exports.createPages = ({graphql, actions}) => {
 
 exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
+    if (!node.path) return;
+
     if (node.path.includes('/lesson/')) {
         const value = createFilePath({node, getNode});
         createNodeField({

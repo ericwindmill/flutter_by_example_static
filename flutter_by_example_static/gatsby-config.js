@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.GATSBY_API_URL || "http://localhost:1337",
+        apiURL: process.env.API_URL || "http://localhost:1337",
         contentTypes: [`tutorial`, `lesson`, `user`, `tag`, `blog-post`],
         singleTypes: [`table-of-contents`],
         queryLimit: 1000,
