@@ -1,5 +1,4 @@
 const path = require(`path`);
-const {createFilePath, createRemoteFileNode} = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
@@ -126,32 +125,40 @@ exports.createPages = ({graphql, actions}) => {
 
 exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
-    if (!node.path) return;
+    if (node.internal.type === 'SitePage') {
+        if (node.path.includes('/lesson/')) {
+            const value = node.path;
+            createNodeField({
+                name: `slug`,
+                node,
+                value,
+            })
+        }
+        if (node.path.includes('/blog/')) {
+            const value = node.path;
+            createNodeField({
+                name: `slug`,
+                node,
+                value,
+            })
+        }
+        if (node.path.includes('/tag/')) {
+            const value = node.path;
+            createNodeField({
+                name: `slug`,
+                node,
+                value,
+            })
+        }
+    }
+}
 
-    if (node.path.includes('/lesson/')) {
-        const value = createFilePath({node, getNode});
-        createNodeField({
-            name: `slug`,
-            node,
-            value,
-        })
-    }
-    if (node.path.includes('/blog/')) {
-        const value = createFilePath({node, getNode});
-        createNodeField({
-            name: `slug`,
-            node,
-            value,
-        })
-    }
-    if (node.path.includes('/tag/')) {
-        const value = createFilePath({node, getNode});
-        createNodeField({
-            name: `slug`,
-            node,
-            value,
-        })
-    }
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+        node: {
+            fs: 'empty'
+        }
+    })
 }
 
 // exports.createResolvers = ({actions, cache, createNodeId, createResolvers, store, reporter}) => {
