@@ -10,6 +10,7 @@ import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 import { Disqus } from "gatsby-plugin-disqus";
 import Bio from "../components/bio";
 import { siteMetadata } from "../../gatsby-config";
+import DartPadInjectComponent from "../utils/dartpad_inject_component";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -17,11 +18,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <script
-          type="text/javascript"
-          src="https://dartpad.dev/inject_embed.dart.js"
-          defer
-        ></script>
+          <DartPadInjectComponent/>
         <SEO title={post.title} description={post.content} />
         <MainContentWrapper>
           <div style={{ margin: "50px 0" }}>

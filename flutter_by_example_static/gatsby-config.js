@@ -64,12 +64,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-load-script',
-      options: {
-        src: "https://dartpad.dev/experimental/inject_embed.dart.js"
-      }
-    },
-    {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `flutterbyexample`
