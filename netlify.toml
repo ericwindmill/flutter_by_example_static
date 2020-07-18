@@ -1,4 +1,4 @@
 [build]
-  command = "gatsby build"
+  command = "cd flutter_by_example_static && gatsby build"
   functions = "functions"
   publish = "flutter_by_example_static/public"
