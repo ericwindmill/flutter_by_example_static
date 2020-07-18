@@ -16,12 +16,9 @@ import "../styles/globals.css";
 
 class Layout extends React.Component {
     render() {
-        const {location, tutorialLessons, post, children, data} = this.props;
-        console.log(this.props);
+        const {location, tutorialLessons, post, children} = this.props;
         const rootPath = `${__PATH_PREFIX__}/`;
         const isLessonPage = location.pathname.includes("/lesson/");
-
-
         let header = <StaticQuery
             query={layoutQuery}
             render={data => {
