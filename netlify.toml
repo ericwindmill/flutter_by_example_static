@@ -1,3 +1,0 @@
-[build]
-  command = "cd flutter_by_example_static && gatsby build"
-  publish = "public"
