@@ -16,7 +16,7 @@ import "../styles/globals.css";
 
 class Layout extends React.Component {
     render() {
-        const {location, tutorialLessons, post, children} = this.props;
+        const {location, tutorialLessons, post, children, tableOfContentsForTutorial} = this.props;
         const rootPath = `${__PATH_PREFIX__}/`;
         const isLessonPage = location.pathname.includes("/lesson/");
         let header = <StaticQuery
@@ -82,9 +82,7 @@ class Layout extends React.Component {
 
                 }
             }}
-
         />
-
 
         return (
             <Wrapper>
@@ -99,6 +97,7 @@ class Layout extends React.Component {
                     <SideTableOfContents
                         lessonNodes={tutorialLessons}
                         tutorialTitle={post.tutorial.title}
+                        tableOfContentsForTutorial={tableOfContentsForTutorial}
                     />
                 )}
             </Wrapper>

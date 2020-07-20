@@ -13,18 +13,32 @@ import {Disqus} from "gatsby-plugin-disqus";
 import {siteMetadata} from "../../gatsby-config";
 import DartPadInjectComponent from "../utils/dartpad_inject_component";
 
-class BlogPostTemplate extends React.Component {
+class LessonPostTemplate extends React.Component {
 
+    getTableOfContentsForTutorial(tableOfContents, category, tutorialTitle) {
+        let tableOfContentsObj = JSON.parse(tableOfContents);
+        let categoryNode = Object.entries(tableOfContentsObj).find((categoryObj) => {
+            return categoryObj[0] === category;
+        })[1];
+        return Object.entries(categoryNode).find((tutObj) => {
+            return tutObj[0] === tutorialTitle;
+        });
+
+    }
 
     render() {
         const post = this.props.data.strapiLesson;
         const tutorialLessons = this.props.data.strapiTutorial;
+        const tableOfContents = this.props.data.strapiTableOfContents.contents;
         const {previous, next} = this.props.pageContext;
+        const tutorialLessonList = this.getTableOfContentsForTutorial(tableOfContents, post.tutorial.category, post.tutorial.title);
+
         return (
             <Layout
                 location={this.props.location}
                 tutorialLessons={tutorialLessons}
                 post={post}
+                tableOfContentsForTutorial={tutorialLessonList}
             >
                 <SEO title={post.title} description={post.content}/>
                 <DartPadInjectComponent/>
@@ -105,7 +119,7 @@ class BlogPostTemplate extends React.Component {
     }
 }
 
-export default BlogPostTemplate;
+export default LessonPostTemplate;
 
 const PageLayout = styled.div`
   display: flex;
@@ -143,6 +157,9 @@ export const pageQuery = graphql`
                 tutorial
                 updated_at
             }
+        }
+        strapiTableOfContents {
+            contents
         }
     }
 `;

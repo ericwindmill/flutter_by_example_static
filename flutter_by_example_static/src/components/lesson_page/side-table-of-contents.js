@@ -1,21 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 import {colors} from "../../styles/colors";
-import {Link} from "gatsby";
+import {graphql, Link} from "gatsby";
 import {device} from "../../styles/media";
 
 class SideTableOfContents extends React.Component {
 
+    lessonNode(lessonTitle, documents) {
+        const lesson =  documents.filter(lessonNode => {
+            return lessonNode.title === lessonTitle;
+        });
+        // returns array with 1 item
+        return lesson[0];
+    }
+
     render() {
         const {lessons} = this.props.lessonNodes;
-        const {tutorialTitle} = this.props;
+        const {tutorialTitle, tableOfContentsForTutorial} = this.props;
+        const tutorialContents = tableOfContentsForTutorial[1];
         return (
             <ToCContainer>
                 <div>
                     <h4>{tutorialTitle}</h4>
                 </div>
                 <ol>
-                    {lessons.map((lesson, index) => {
+                    {tutorialContents.map((lessonTitle) => {
+                        const lesson = this.lessonNode(lessonTitle, lessons);
+                        if (lesson === undefined) {
+                            return <div key={'_' + Math.random().toString(36).substr(2, 9)} />;
+                        }
                         return <li>
                             <Link to={`/lesson/${lesson.slug}`}>{lesson.title}</Link>
                         </li>
@@ -38,7 +51,16 @@ const ToCContainer = styled.div`
     right: -300px;
     top: 0;
    
-    @media ${device.laptopL} { 
+    @media ${device.laptop} { 
         right: 0;
     }
 `;
+
+const tableOfContentsQuery = graphql`
+    query SideTableOfContentsQuery {
+        strapiTableOfContents {
+            contents
+        }
+    }
+
+`

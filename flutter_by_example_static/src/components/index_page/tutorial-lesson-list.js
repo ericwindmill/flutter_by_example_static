@@ -5,27 +5,36 @@ import styled from 'styled-components';
 import {colors} from "../../styles/colors";
 
 class TutorialLessonList extends React.Component {
+
+    lessonNode(lessonTitle, documents) {
+        return documents.filter(lessonNode => {
+            return lessonNode.title === lessonTitle;
+        })[0];
+    }
+
     render() {
-        const {lessons, tutorialTitle, authorName} = this.props;
+        const {lessons, tutorialTitle, authorName, lessonsSubToc} = this.props;
         return (
-            <div style={{margin: `${spacing.scale(2)} 0`}}>
+            <div style={{margin: `${spacing.scale(2)} 0`,  counterIncrement: "a"}}>
                 <div style={{
                     borderBottom: "solid black 1px",
                     margin: `${spacing.scale(2)} 0`,
                     display: 'flex',
-                    alignItems: 'center'
+                    alignItems: 'center',
                 }}>
-                    <h2 style={{margin: "5px 0px"}}>{tutorialTitle}{' '}</h2><h3
-                    style={{margin: 0, padding: 0}}>&nbsp;  by {authorName}</h3>
+                    <h2 style={{margin: "5px 0px"}}>{tutorialTitle}</h2>
                 </div>
                 <ul style={{listStyle: "none", display: 'flex', flexFlow: 'column wrap'}}>
-                    {lessons.map(lesson => (
-
-                        <Link key={`lesson-link-key-${lesson.id}`} to={`lesson/${lesson.slug}`}>
+                    {Object.entries(lessonsSubToc).map((lessonTitle, index) => {
+                        let lesson = this.lessonNode(lessonTitle[1], lessons);
+                        if (lesson === undefined) {
+                            return <div key={'_' + Math.random().toString(36).substr(2, 9)} />;
+                        }
+                        return <Link key={`lesson-link-key-${lesson.id}`} to={`lesson/${lesson.slug}`} style={{counterIncrement: "b"}}>
                             <LessonLink key={lesson.id}>{lesson.title}</LessonLink>
                         </Link>
 
-                    ))}
+                    })}
                 </ul>
             </div>
         );
@@ -41,9 +50,11 @@ const LessonLink = styled.li`
    cursor: pointer;
    margin: 0; 
    padding: 0;
- 
    &:hover {
         background-color: ${colors.googleGrey50};
              color: ${colors.primary};
    }
+   &:before {
+        content: counter(a) "." counter(b) " ";
+    }
 `;
