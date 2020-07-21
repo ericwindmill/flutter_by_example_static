@@ -12,6 +12,16 @@ export const MainContentWrapper = styled.div`
     flex-flow: column; 
     align-items: center;
     
+    > header {
+        @media ${device.laptop} {
+            width: 90vw;    
+        }
+        
+        @media ${device.laptopL} {
+            width: 800px;
+        }
+    }
+    
     > * {
         width: 90vw;
         margin: 0 40px;

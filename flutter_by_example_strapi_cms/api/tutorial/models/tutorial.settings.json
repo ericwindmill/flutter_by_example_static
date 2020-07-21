@@ -16,7 +16,9 @@
       "type": "enumeration",
       "enum": [
         "Dart",
-        "Flutter"
+        "DartLibraries",
+        "Flutter",
+        "FlutterLibraries"
       ]
     },
     "lessons": {

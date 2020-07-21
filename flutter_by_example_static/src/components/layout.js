@@ -70,7 +70,7 @@ class Layout extends React.Component {
                                             width: 40
                                         }}
                                     />
-                                    <h1 style={{color: `${colors.googleGrey600}`}}>
+                                    <h1 style={{color: `${colors.googleGrey600}`, margin: 0}}>
                                         Flutter by Example
                                     </h1>
                                 </div>
