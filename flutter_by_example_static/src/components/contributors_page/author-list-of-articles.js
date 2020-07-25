@@ -7,7 +7,7 @@ class AuthorListOfArticles extends React.Component {
         return (
             <div style={{margin: "20px 0 "}}>
                 <h3 style={{margin: "10px 0"}}>Contributions</h3>
-                <p style={{margin:"10px 0"}}>Articles</p>
+                {(articles.length > 2) && <p style={{margin:"10px 0"}}>Articles</p>}
                 <ul>
                     {articles.map((a, index) => {
                         return <li key={`contributions-${a.title}-${index}`}>
@@ -15,7 +15,7 @@ class AuthorListOfArticles extends React.Component {
                         </li>
                     })}
                 </ul>
-                <p style={{margin: "10px 0"}}>Tutorials</p>
+                {(tutorials.length > 2) && <p style={{margin: "10px 0"}}>Tutorials</p>}
                 <ul>
                     {tutorials.map((t, index) => {
                         return <li key={`contributions-${t.title}-${index}`}>{t.title}</li>

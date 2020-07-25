@@ -73,6 +73,7 @@ const contributorsQuery = graphql`
           username
           twitter
           bio
+          email
         }
       }
     }

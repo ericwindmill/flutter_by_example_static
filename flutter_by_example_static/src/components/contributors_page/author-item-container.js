@@ -28,13 +28,13 @@ class AuthorItemContainer extends React.Component {
                     <p style={{margin: '10px 0 5px'}}>{author.bio}</p>
                     <ul style={{display: 'flex', listStyle: 'none', margin: 0, padding: 0}}>
                         <li style={{margin: 0}}>
-                            <a href={'/'} style={{lineHeight: 0, margin: 0, padding:0}}>
+                            <a href={`https://twitter.com/${author.twitter}`} style={{lineHeight: 0, margin: 0, padding:0}}>
                                 @{author.twitter} on Twitter
                             </a>
                         </li>
                         <li>
                             <a href={`mailto:${author.email}`}>
-                                contact
+                                email
                             </a>
                         </li>
                     </ul>
