@@ -22,6 +22,11 @@ class Contributors extends React.Component {
             <h1 style={{ fontSize: 45, margin: 0, padding: 0 }}>
               Contributors
             </h1>
+              <div style={{marginTop: 50}}>
+            <h3>
+              Want to contribute? <a href={'mailto:eric@ericwindmill.com'}>Email me for access to the backend writing platform.</a>
+            </h3>
+              </div>
           </div>
           <StaticQuery
             query={contributorsQuery}

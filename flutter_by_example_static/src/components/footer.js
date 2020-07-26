@@ -15,7 +15,7 @@ class Footer extends React.Component {
         render={data => (
           <div
             style={{
-              paddingTop: `${spacing.scale(5)}`,
+              paddingTop: `${spacing.scale(1)}`,
               background: `${colors.themeBackground}`,
               color: `${colors.white}`
             }}

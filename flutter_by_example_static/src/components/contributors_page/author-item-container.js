@@ -10,11 +10,12 @@ class AuthorItemContainer extends React.Component {
         return (
             <Container>
                 <div style={{
-                    borderRadius: "100%",
+                    borderRadius: "50%",
                     background: `${colors.dartPrimary}`,
                     color: "white",
-                    width: 100,
-                    height: 100,
+                    minWidth: 75,
+                    width: 75,
+                    height: 75,
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",

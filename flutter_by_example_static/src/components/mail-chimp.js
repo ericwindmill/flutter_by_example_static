@@ -6,6 +6,9 @@ class MailChimp extends Component {
   render() {
     return (
       <OptInContainer>
+        <h1 style={{marginTop: 0, textAlign: "center" }}>
+          Join thousands of Flutter developers.
+        </h1>
         <h3 style={{ margin: 0, textAlign: "center" }}>
           Sign up for infrequent updates about Flutter and Dart.
         </h3>

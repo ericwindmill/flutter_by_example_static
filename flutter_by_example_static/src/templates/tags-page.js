@@ -7,7 +7,6 @@ import PostItemContainer from "../components/blog_page/post_item_container";
 
 class Tags extends React.Component {
   render() {
-    console.log(this.props.data);
     const tag = this.props.data.strapiTag;
     const postEdges = this.props.data.allStrapiBlogPost.edges;
     const tutorialEdges = this.props.data.allStrapiTutorial.edges;
@@ -60,6 +59,7 @@ class Tags extends React.Component {
 }
 
 export default Tags;
+
 export const tagsQuery = graphql`
   query postsForTag($tag: String!) {
     strapiTag(title: { eq: $tag }) {

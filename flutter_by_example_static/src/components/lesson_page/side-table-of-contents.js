@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {colors} from "../../styles/colors";
-import {graphql, Link} from "gatsby";
+import {Link} from "gatsby";
 import {device} from "../../styles/media";
 
 class SideTableOfContents extends React.Component {
@@ -55,12 +55,3 @@ const ToCContainer = styled.div`
         right: 0;
     }
 `;
-
-const tableOfContentsQuery = graphql`
-    query SideTableOfContentsQuery {
-        strapiTableOfContents {
-            contents
-        }
-    }
-
-`

@@ -18,7 +18,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-          <DartPadInjectComponent/>
+        <DartPadInjectComponent/>
         <SEO title={post.title} description={post.content} />
         <MainContentWrapper>
           <div style={{ margin: "50px 0" }}>

@@ -44,12 +44,22 @@ class IndexPage extends React.Component {
             />
             <div style={{ maxWidth: "400px", margin: "100px 0 0 30px" }}>
               <h2>
-                How it's done. From the basics of Dart and Flutter to advanced
+                Writing and teaching Flutter From the basics of Dart and Flutter to advanced
                 topics with simple, but detailed examples.
               </h2>
             </div>
           </div>
         </FullWidthContentWrapper>
+          <FullWidthContentWrapper style={{backgroundColor: colors.dartLangBlue, color: colors.white, padding: 100, textAlign: "center" }}>
+              <MainContentWrapper>
+              <div>
+                  <h1>The original Flutter tutorial. </h1>
+                  <h3>
+                      Flutter by Example has been publishing tutorials since 2017, when Flutter was still in it's alpha stage. Last updated in Summer 2020.
+                  </h3>
+              </div>
+              </MainContentWrapper>
+          </FullWidthContentWrapper>
         <FullWidthContentWrapper>
           <div style={{ backgroundColor: colors.googleGrey100, padding: 100 }}>
             <div style={{ width: 800, margin: "auto", textAlign: "center" }}>

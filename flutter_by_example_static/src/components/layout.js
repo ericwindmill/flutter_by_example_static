@@ -22,66 +22,66 @@ class Layout extends React.Component {
         let header = <StaticQuery
             query={layoutQuery}
             render={data => {
-                {
-                    if (location.pathname === rootPath) {
 
-                        return <div>
+                if (location.pathname === rootPath) {
+
+                    return <div>
+                        <div
+                            style={{
+                                borderBottom: "1px solid black",
+                                display: "flex",
+                                alignItems: "center",
+                                padding: `${spacing.scale(2.5)} 0`
+                            }}
+                        >
+                            <Image
+                                fluid={data.avatar.childImageSharp.fluid}
+                                alt={"flutter logo"}
+                                style={{
+                                    marginRight: rhythm(2),
+                                    width: 130
+                                }}
+                            />
+                            <div>
+                                <h1 style={{fontSize: 45}}>Flutter by Example</h1>
+                                <h2>A complete Dart and Flutter tutorial</h2>
+                            </div>
+                        </div>
+                        <Navigation/>
+                    </div>
+
+                } else {
+
+                    return (<div>
+                        <Link to={"/"}>
                             <div
                                 style={{
                                     borderBottom: "1px solid black",
-                                    display: "flex",
                                     alignItems: "center",
-                                    padding: `${spacing.scale(2.5)} 0`
+                                    display: "flex",
+                                    padding: `${spacing.scale(1)} 0`
                                 }}
                             >
                                 <Image
                                     fluid={data.avatar.childImageSharp.fluid}
                                     alt={"flutter logo"}
                                     style={{
-                                        marginRight: rhythm(2),
-                                        width: 130
+                                        marginRight: rhythm(1),
+                                        width: 40
                                     }}
                                 />
-                                <div>
-                                    <h1 style={{fontSize: 45}}>Flutter by Example</h1>
-                                    <h2>A complete Dart and Flutter tutorial</h2>
-                                </div>
+                                <h1 style={{color: `${colors.googleGrey600}`, margin: 0}}>
+                                    Flutter by Example
+                                </h1>
                             </div>
-                            <Navigation/>
-                        </div>
-
-                    } else {
-
-                        return (<div>
-                            <Link to={"/"}>
-                                <div
-                                    style={{
-                                        borderBottom: "1px solid black",
-                                        alignItems: "center",
-                                        display: "flex",
-                                        padding: `${spacing.scale(1)} 0`
-                                    }}
-                                >
-                                    <Image
-                                        fluid={data.avatar.childImageSharp.fluid}
-                                        alt={"flutter logo"}
-                                        style={{
-                                            marginRight: rhythm(1),
-                                            width: 40
-                                        }}
-                                    />
-                                    <h1 style={{color: `${colors.googleGrey600}`, margin: 0}}>
-                                        Flutter by Example
-                                    </h1>
-                                </div>
-                            </Link>
-                            <Navigation/>
-                        </div>);
-
-                    }
+                        </Link>
+                        <Navigation/>
+                    </div>);
 
                 }
-            }}
+
+            }
+            }
         />
 
         return (

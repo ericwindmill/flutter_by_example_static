@@ -153,31 +153,10 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     }
 }
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, loaders }) => {
     actions.setWebpackConfig({
         node: {
             fs: 'empty'
-        }
+        },
     })
 }
-
-// exports.createResolvers = ({actions, cache, createNodeId, createResolvers, store, reporter}) => {
-//     const {createNode} = actions;
-//     createResolvers({
-//         StrapiLessonAuthor: {
-//             avatarImage: {
-//                 type: `File`,
-//                 resolve(source, args, context, info) {
-//                     return createRemoteFileNode({
-//                         url: `${source.url}`, // for S3 upload. For local: `http://localhost:1337${source.url}`,
-//                         store,
-//                         cache,
-//                         createNode,
-//                         createNodeId,
-//                         reporter,
-//                     })
-//                 },
-//             },
-//         },
-//     })
-// }

@@ -12,6 +12,7 @@ import MarkdownSyntaxHighlighter from "../styles/markdown-syntax-highlighter";
 import {Disqus} from "gatsby-plugin-disqus";
 import {siteMetadata} from "../../gatsby-config";
 import DartPadInjectComponent from "../utils/dartpad_inject_component";
+import htmlParser from 'react-markdown/plugins/html-parser'
 
 class LessonPostTemplate extends React.Component {
 
@@ -23,11 +24,15 @@ class LessonPostTemplate extends React.Component {
         return Object.entries(categoryNode).find((tutObj) => {
             return tutObj[0] === tutorialTitle;
         });
-
     }
+
+
 
     render() {
         const post = this.props.data.strapiLesson;
+
+        if (post == null) return <div />;
+
         const tutorialLessons = this.props.data.strapiTutorial;
         const tableOfContents = this.props.data.strapiTableOfContents.contents;
         const {previous, next} = this.props.pageContext;
@@ -40,8 +45,8 @@ class LessonPostTemplate extends React.Component {
                 post={post}
                 tableOfContentsForTutorial={tutorialLessonList}
             >
-                <SEO title={post.title} description={post.content}/>
                 <DartPadInjectComponent/>
+                <SEO title={post.title} description={post.content}/>
                 <PageLayout>
                     <MainContentWrapper>
                         <div style={{margin: "50px 0"}}>
