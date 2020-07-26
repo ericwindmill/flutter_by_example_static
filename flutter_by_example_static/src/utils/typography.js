@@ -25,6 +25,10 @@ Wordpress2012.overrideThemeStyles = () => {
     },
     "a:hover": {
       color: colors.primary
+    },
+    "pre, code": {
+      fontSize: `14px`,
+      background: `rgb(248, 249, 250)`
     }
   };
 };

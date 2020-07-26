@@ -37,7 +37,7 @@ class Contributors extends React.Component {
                   {authors.map((author, index) => (
                     <li
                       style={{
-                        margin: 0,
+                        margin: '0 0 50px 0',
                         border: `1px solid ${colors.googleGrey100}`,
                         padding: `${spacing.grid["2"]}px`,
                         borderRadius: 4
