@@ -43,7 +43,7 @@ Great. I'm on board with this. _But_, (to continue the web-framework example), w
   plenty of great options, lets get to work on our domain problems." (And, as we all know, very few business' domains
   is "developer tools".)
 
-When does this positive outcome (innovation) become a problem? As soon as we start [bike shedding]() about using
+When does this positive outcome (innovation) become a problem? As soon as we start [bike shedding](https://en.wikipedia.org/wiki/Law_of_triviality) about using
  this innovation to solve problems that _don't exist_.
 
 Before going down that rabbit hole, let me define what (I believe) the point of all these state management libraries
