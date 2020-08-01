@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer=""></script><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:87.5%/1.714 'Open Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.73);font-family:'Open Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:34px;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:26px;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:22px;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.91028rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;color:inherit;font-family:'Open Sans',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.86849rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}ul{margin-left:1.714rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;list-style-position:outside;list-style-image:none;list-style:disc outside;}ol{margin-left:1.714rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;list-style-position:outside;list-style-image:none;list-style:decimal outside;}dl{margin-left:1.714rem;margin-right:1.714rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;font-size:18px;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;font-size:0.85rem;line-height:1.714rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;font-size:0.91028rem;line-height:1.714rem;border-collapse:collapse;width:100%;color:hsla(0,0%,0%,0.54);}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}blockquote{margin-left:1.714rem;margin-right:1.714rem;margin-top:0;padding-bottom:1.714rem;padding-left:1.714rem;padding-right:1.714rem;padding-top:1.714rem;margin-bottom:1.714rem;font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.714rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.714rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;text-transform:uppercase;color:hsla(0,0%,0%,0.61);}li{margin-bottom:calc(1.714rem / 2);margin-left:2.571rem;}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.714rem;margin-bottom:calc(1.714rem / 2);margin-top:calc(1.714rem / 2);}li > ul{margin-left:1.714rem;margin-bottom:calc(1.714rem / 2);margin-top:calc(1.714rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.714rem / 2);}code{font-size:0.85rem;line-height:1.714rem;}kbd{font-size:0.85rem;line-height:1.714rem;}samp{font-size:0.85rem;line-height:1.714rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.14267rem;padding-right:1.14267rem;padding-top:0.857rem;padding-bottom:calc(0.857rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}ol,ul{margin-left:0;}a{color:#21759b;}a:hover{color:#0175C2;}a:visited{color:#9f9f9f;}a.gatsby-resp-image-link{box-shadow:none;}a, a:visited{color:#02569B;text-decoration:none;}</style><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=67642a0b80f3d50277c44cde8f450e50"/><style data-styled="cvrhcu dvNcWI ImZMA iNZSYx iilyiP jNJocn bNlKjA cgWtnK WKAcc jiNflK fHdcHI" data-styled-version="4.4.1">
+/* sc-component-id: navigation__NavList-sc-1xkby60-0 */
+.ImZMA{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;list-style:none;margin:20px;}
+/* sc-component-id: navigation__NavListItem-sc-1xkby60-1 */
+.iNZSYx{padding:0;margin:0;font-size:20px;color:#02569B;} .iNZSYx *:visited{color:#02569B;}
+/* sc-component-id: mail-chimp__OptInContainer-sc-1m2j3nv-0 */
+.cgWtnK #mc_embed_signup_scroll{display:grid;grid-template-areas:"input submitButton";grid-template-columns:1fr 200px;grid-gap:20px;padding:12px;border-radius:3px;margin-bottom:25px;} .cgWtnK #mc_embed_signup_scroll .mc-field-group{grid-area:input;width:100%;} .cgWtnK #mc_embed_signup_scroll .clear{grid-area:submitButton;width:100%;} .cgWtnK #mc_embed_signup_scroll .input-text{width:100%;background:white;border:none;border-radius:5px;font-size:1rem;padding:15px 5px 15px;-webkit-transition:all .3s ease;transition:all .3s ease;} .cgWtnK #mc_embed_signup_scroll .input-text:focus{outline:none;background:#eceef1;} .cgWtnK #mc_embed_signup_scroll .button{width:100%;height:56px;text-align:center;border:none;border-radius:5px;background:#02569B;color:#FFFFFF;font-size:1.5rem;padding:0 10px;-webkit-transition:300ms all ease;transition:300ms all ease;} .cgWtnK #mc_embed_signup_scroll .button:hover{background:#0175C2;cursor:pointer;} .cgWtnK .HideMe{position:absolute;left:-5000px;}
+/* sc-component-id: social-links__SocialLinkList-sc-19qtuc3-0 */
+.WKAcc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;list-style:none;margin:60px 0px;}
+/* sc-component-id: social-links__ListItem-sc-19qtuc3-1 */
+.jiNflK{padding:0;margin:0;font-size:20px;} .jiNflK a{color:#02569B;} .jiNflK *:visited{color:#02569B;}
+/* sc-component-id: layout__FullWidthContentWrapper-l112n8-0 */
+.bNlKjA{width:100vw;margin-left:auto;margin-right:auto;}
+/* sc-component-id: layout__MainContentWrapper-l112n8-1 */
+.dvNcWI{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} @media (min-width:1024px){.dvNcWI > header{width:90vw;}} @media (min-width:1440px){.dvNcWI > header{width:800px;}} .dvNcWI > *{width:90vw;margin:0 40px;} @media (min-width:1024px){.dvNcWI > *{width:65vw;}} @media (min-width:1440px){.dvNcWI > *{width:800px;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;margin:0;}}
+/* sc-component-id: layout__Wrapper-l112n8-2 */
+.cvrhcu{min-height:100vh;width:100vw;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;} @media (min-width:1440px){.cvrhcu{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}
+/* sc-component-id: side-table-of-contents__ToCContainer-sc-1b044cw-0 */
+.fHdcHI{height:100vh;width:300px;background:white;padding:20px;border-left:1px solid #D5D7DA;position:fixed;right:-300px;top:0;} @media (min-width:1024px){.fHdcHI{right:0;}}
+/* sc-component-id: blog_post_styles__BlogPostStyleWrapper-uzp9x5-0 */
+.jNJocn h1,.jNJocn h2,.jNJocn h3,.jNJocn h4,.jNJocn h5{margin:30px 0;line-height:1;} .jNJocn p,.jNJocn li{font-size:18px;} .jNJocn p{margin:20px 0;}
+/* sc-component-id: lesson-post__PageLayout-pbruem-0 */
+.iilyiP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><title data-react-helmet="true">About Brick and setup | Flutter by Example</title><meta data-react-helmet="true" name="description" content="
+&lt;div class=&quot;aside&quot;&gt;
+You can find the same content in video form &lt;a href=&quot;https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/&quot;&gt;on the Flutter by Example youtube channel.&lt;/a&gt;
+&lt;/div&gt;
+
+[Brick](https://github.com/greenbits/brick) is a data persistence library in Flutter. It filters data from multiple sources through a single entrypoint - for example, when requesting a list of users, Brick will poll users in-memory, users in SQLite, and, if all else fails, users in Firestore. All of this happens through a consistent query interface and a bunch of generated code, leaving your app to focus on simply _using_ the data.
+
+This tutorial will walk through creating models, interacting with an API endpoint, and finally, rendering data.
+
+As every API varies, one has to be stubbed to plainly illustrate the example.
+
+Save each API response in a `_api` folder in the root of a new Flutter app:
+
+1. `_api/customer.json`
+    ```json
+    {
+      &quot;customer&quot;: {
+        &quot;id&quot;: 1,
+        &quot;pizza_ids&quot;: [
+          1
+        ],
+        &quot;firstName&quot;: &quot;Wallace&quot;,
+        &quot;lastName&quot;: &quot;Wallaceton&quot;
+      }
+    }
+    ```
+1. `_api/customers.json`
+    ```json
+    {
+      &quot;customers&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;pizza_ids&quot;: [
+            1
+          ],
+          &quot;firstName&quot;: &quot;Wallace&quot;,
+          &quot;lastName&quot;: &quot;Wallaceton&quot;
+        }
+      ]
+    }
+    ```
+1. `_api/pizza.json`
+    ```json
+    {
+      &quot;pizza&quot;: {
+        &quot;id&quot;: 1,
+        &quot;customer_id&quot;: 1,
+        &quot;frozen&quot;: false,
+        &quot;toppings&quot;: [
+          &quot;pepperoni&quot;,
+          &quot;olives&quot;
+        ]
+      }
+    }
+    ```
+1. `_api/pizzas.json`
+    ```json
+    {
+      &quot;pizzas&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;customer_id&quot;: 1,
+          &quot;frozen&quot;: false,
+          &quot;toppings&quot;: [
+            &quot;pepperoni&quot;,
+            &quot;olives&quot;
+          ]
+        }
+      ]
+    }
+    ```
+
+Now add `shelf: any` to your pubspec.yaml. And lastly, create the file that will power our local API server:
+
+`server.dart`
+```dart
+import &#x27;package:shelf/shelf.dart&#x27; as shelf;
+import &#x27;package:shelf/shelf_io.dart&#x27; as io;
+import &#x27;dart:io&#x27;;
+
+void main() {
+  var handler = const shelf.Pipeline().addMiddleware(shelf.logRequests()).addHandler(_echoRequest);
+
+  io.serve(handler, &#x27;localhost&#x27;, 8080).then((server) {
+    print(&#x27;Serving at http://${server.address.host}:${server.port}&#x27;);
+  });
+}
+
+Future&lt;shelf.Response&gt; _echoRequest(shelf.Request request) async {
+  final endpoints = [&quot;customers&quot;, &quot;pizza&quot;, &quot;pizzas&quot;];
+
+  return await endpoints
+      .fold(shelf.Response.notFound(&quot;Request ${request.url} does not match a known endpoint&quot;),
+          (acc, endpoint) async {
+    final resp = await _jsonForRequest(request, endpoint);
+    if (resp != null) return shelf.Response.ok(resp, headers: {&quot;Content-Type&quot;: &quot;application/json&quot;});
+    return acc;
+  });
+}
+
+Future&lt;String&gt; _jsonForRequest(shelf.Request request, String fileName) async {
+  if (!request.url.toString().startsWith(fileName)) return null;
+  return await File(&quot;_api/$fileName.json&quot;).readAsString();
+}
+```
+
+Now that our API is stubbed, we can do the regular Brick install:
+
+1. Add the packages to `pubspec.yaml`:
+    ```yaml
+    dependencies:
+      brick_offline_first: any
+    dev_dependencies:
+      brick_offline_first_with_rest_build:
+        git:
+          url: https://github.com/greenbits/brick.git
+          path: packages/brick_offline_first_with_rest_build
+      build_runner: any
+    ```
+1. Setup Brick&#x27;s expected folders:
+    ```shell
+    mkdir -p lib/app/adapters lib/app/db lib/app/models;
+    ```
+
+Now we can get to the fun part.
+"/><meta data-react-helmet="true" property="og:title" content="About Brick and setup"/><meta data-react-helmet="true" property="og:description" content="
+&lt;div class=&quot;aside&quot;&gt;
+You can find the same content in video form &lt;a href=&quot;https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/&quot;&gt;on the Flutter by Example youtube channel.&lt;/a&gt;
+&lt;/div&gt;
+
+[Brick](https://github.com/greenbits/brick) is a data persistence library in Flutter. It filters data from multiple sources through a single entrypoint - for example, when requesting a list of users, Brick will poll users in-memory, users in SQLite, and, if all else fails, users in Firestore. All of this happens through a consistent query interface and a bunch of generated code, leaving your app to focus on simply _using_ the data.
+
+This tutorial will walk through creating models, interacting with an API endpoint, and finally, rendering data.
+
+As every API varies, one has to be stubbed to plainly illustrate the example.
+
+Save each API response in a `_api` folder in the root of a new Flutter app:
+
+1. `_api/customer.json`
+    ```json
+    {
+      &quot;customer&quot;: {
+        &quot;id&quot;: 1,
+        &quot;pizza_ids&quot;: [
+          1
+        ],
+        &quot;firstName&quot;: &quot;Wallace&quot;,
+        &quot;lastName&quot;: &quot;Wallaceton&quot;
+      }
+    }
+    ```
+1. `_api/customers.json`
+    ```json
+    {
+      &quot;customers&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;pizza_ids&quot;: [
+            1
+          ],
+          &quot;firstName&quot;: &quot;Wallace&quot;,
+          &quot;lastName&quot;: &quot;Wallaceton&quot;
+        }
+      ]
+    }
+    ```
+1. `_api/pizza.json`
+    ```json
+    {
+      &quot;pizza&quot;: {
+        &quot;id&quot;: 1,
+        &quot;customer_id&quot;: 1,
+        &quot;frozen&quot;: false,
+        &quot;toppings&quot;: [
+          &quot;pepperoni&quot;,
+          &quot;olives&quot;
+        ]
+      }
+    }
+    ```
+1. `_api/pizzas.json`
+    ```json
+    {
+      &quot;pizzas&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;customer_id&quot;: 1,
+          &quot;frozen&quot;: false,
+          &quot;toppings&quot;: [
+            &quot;pepperoni&quot;,
+            &quot;olives&quot;
+          ]
+        }
+      ]
+    }
+    ```
+
+Now add `shelf: any` to your pubspec.yaml. And lastly, create the file that will power our local API server:
+
+`server.dart`
+```dart
+import &#x27;package:shelf/shelf.dart&#x27; as shelf;
+import &#x27;package:shelf/shelf_io.dart&#x27; as io;
+import &#x27;dart:io&#x27;;
+
+void main() {
+  var handler = const shelf.Pipeline().addMiddleware(shelf.logRequests()).addHandler(_echoRequest);
+
+  io.serve(handler, &#x27;localhost&#x27;, 8080).then((server) {
+    print(&#x27;Serving at http://${server.address.host}:${server.port}&#x27;);
+  });
+}
+
+Future&lt;shelf.Response&gt; _echoRequest(shelf.Request request) async {
+  final endpoints = [&quot;customers&quot;, &quot;pizza&quot;, &quot;pizzas&quot;];
+
+  return await endpoints
+      .fold(shelf.Response.notFound(&quot;Request ${request.url} does not match a known endpoint&quot;),
+          (acc, endpoint) async {
+    final resp = await _jsonForRequest(request, endpoint);
+    if (resp != null) return shelf.Response.ok(resp, headers: {&quot;Content-Type&quot;: &quot;application/json&quot;});
+    return acc;
+  });
+}
+
+Future&lt;String&gt; _jsonForRequest(shelf.Request request, String fileName) async {
+  if (!request.url.toString().startsWith(fileName)) return null;
+  return await File(&quot;_api/$fileName.json&quot;).readAsString();
+}
+```
+
+Now that our API is stubbed, we can do the regular Brick install:
+
+1. Add the packages to `pubspec.yaml`:
+    ```yaml
+    dependencies:
+      brick_offline_first: any
+    dev_dependencies:
+      brick_offline_first_with_rest_build:
+        git:
+          url: https://github.com/greenbits/brick.git
+          path: packages/brick_offline_first_with_rest_build
+      build_runner: any
+    ```
+1. Setup Brick&#x27;s expected folders:
+    ```shell
+    mkdir -p lib/app/adapters lib/app/db lib/app/models;
+    ```
+
+Now we can get to the fun part.
+"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Eric Windmill"/><meta data-react-helmet="true" name="twitter:title" content="About Brick and setup"/><meta data-react-helmet="true" name="twitter:description" content="
+&lt;div class=&quot;aside&quot;&gt;
+You can find the same content in video form &lt;a href=&quot;https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/&quot;&gt;on the Flutter by Example youtube channel.&lt;/a&gt;
+&lt;/div&gt;
+
+[Brick](https://github.com/greenbits/brick) is a data persistence library in Flutter. It filters data from multiple sources through a single entrypoint - for example, when requesting a list of users, Brick will poll users in-memory, users in SQLite, and, if all else fails, users in Firestore. All of this happens through a consistent query interface and a bunch of generated code, leaving your app to focus on simply _using_ the data.
+
+This tutorial will walk through creating models, interacting with an API endpoint, and finally, rendering data.
+
+As every API varies, one has to be stubbed to plainly illustrate the example.
+
+Save each API response in a `_api` folder in the root of a new Flutter app:
+
+1. `_api/customer.json`
+    ```json
+    {
+      &quot;customer&quot;: {
+        &quot;id&quot;: 1,
+        &quot;pizza_ids&quot;: [
+          1
+        ],
+        &quot;firstName&quot;: &quot;Wallace&quot;,
+        &quot;lastName&quot;: &quot;Wallaceton&quot;
+      }
+    }
+    ```
+1. `_api/customers.json`
+    ```json
+    {
+      &quot;customers&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;pizza_ids&quot;: [
+            1
+          ],
+          &quot;firstName&quot;: &quot;Wallace&quot;,
+          &quot;lastName&quot;: &quot;Wallaceton&quot;
+        }
+      ]
+    }
+    ```
+1. `_api/pizza.json`
+    ```json
+    {
+      &quot;pizza&quot;: {
+        &quot;id&quot;: 1,
+        &quot;customer_id&quot;: 1,
+        &quot;frozen&quot;: false,
+        &quot;toppings&quot;: [
+          &quot;pepperoni&quot;,
+          &quot;olives&quot;
+        ]
+      }
+    }
+    ```
+1. `_api/pizzas.json`
+    ```json
+    {
+      &quot;pizzas&quot;: [
+        {
+          &quot;id&quot;: 1,
+          &quot;customer_id&quot;: 1,
+          &quot;frozen&quot;: false,
+          &quot;toppings&quot;: [
+            &quot;pepperoni&quot;,
+            &quot;olives&quot;
+          ]
+        }
+      ]
+    }
+    ```
+
+Now add `shelf: any` to your pubspec.yaml. And lastly, create the file that will power our local API server:
+
+`server.dart`
+```dart
+import &#x27;package:shelf/shelf.dart&#x27; as shelf;
+import &#x27;package:shelf/shelf_io.dart&#x27; as io;
+import &#x27;dart:io&#x27;;
+
+void main() {
+  var handler = const shelf.Pipeline().addMiddleware(shelf.logRequests()).addHandler(_echoRequest);
+
+  io.serve(handler, &#x27;localhost&#x27;, 8080).then((server) {
+    print(&#x27;Serving at http://${server.address.host}:${server.port}&#x27;);
+  });
+}
+
+Future&lt;shelf.Response&gt; _echoRequest(shelf.Request request) async {
+  final endpoints = [&quot;customers&quot;, &quot;pizza&quot;, &quot;pizzas&quot;];
+
+  return await endpoints
+      .fold(shelf.Response.notFound(&quot;Request ${request.url} does not match a known endpoint&quot;),
+          (acc, endpoint) async {
+    final resp = await _jsonForRequest(request, endpoint);
+    if (resp != null) return shelf.Response.ok(resp, headers: {&quot;Content-Type&quot;: &quot;application/json&quot;});
+    return acc;
+  });
+}
+
+Future&lt;String&gt; _jsonForRequest(shelf.Request request, String fileName) async {
+  if (!request.url.toString().startsWith(fileName)) return null;
+  return await File(&quot;_api/$fileName.json&quot;).readAsString();
+}
+```
+
+Now that our API is stubbed, we can do the regular Brick install:
+
+1. Add the packages to `pubspec.yaml`:
+    ```yaml
+    dependencies:
+      brick_offline_first: any
+    dev_dependencies:
+      brick_offline_first_with_rest_build:
+        git:
+          url: https://github.com/greenbits/brick.git
+          path: packages/brick_offline_first_with_rest_build
+      build_runner: any
+    ```
+1. Setup Brick&#x27;s expected folders:
+    ```shell
+    mkdir -p lib/app/adapters lib/app/db lib/app/models;
+    ```
+
+Now we can get to the fun part.
+"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="icon" href="/favicon-32x32.png?v=67642a0b80f3d50277c44cde8f450e50" type="image/png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=67642a0b80f3d50277c44cde8f450e50"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=67642a0b80f3d50277c44cde8f450e50"/><meta name="generator" content="Gatsby 2.24.11"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=67642a0b80f3d50277c44cde8f450e50"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=67642a0b80f3d50277c44cde8f450e50"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=67642a0b80f3d50277c44cde8f450e50"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=67642a0b80f3d50277c44cde8f450e50"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=67642a0b80f3d50277c44cde8f450e50"/><style data-href="/styles.e7b0e8278c7c2b8ce88b.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}p>code{font-size:16px;color:#212529;background:#f8f9fa}blockquote{border:1px solid #0175c2;border-radius:5px;margin:50px 0}blockquote>*{font-style:normal}</style><link as="script" rel="preload" href="/component---src-templates-lesson-post-js-153495e15dc4fef50e5f.js"/><link as="script" rel="preload" href="/c9c126eae92cbcbd555f392e0e3deb97ac6f388a-d5254a4bf75e37e27477.js"/><link as="script" rel="preload" href="/dbdcb065f719db48432e654e3bf73000d4c121b6-d8551571913b5baa5b3a.js"/><link as="script" rel="preload" href="/styles-89fd2ae28bdf06750a71.js"/><link as="script" rel="preload" href="/app-babd675f1b2905cec432.js"/><link as="script" rel="preload" href="/framework-0e8501c0599d79803b4b.js"/><link as="script" rel="preload" href="/webpack-runtime-320f3a78a921bd2474e7.js"/><link as="fetch" rel="preload" href="/page-data/lesson/about-brick-and-setup/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/static/d/2185715291.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/static/d/3564968493.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/static/d/63159454.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__Wrapper-l112n8-2 cvrhcu"><div class="layout__MainContentWrapper-l112n8-1 dvNcWI"><header><div><a href="/"><div style="border-bottom:1px solid black;align-items:center;display:flex;padding:10px 0"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;margin-right:1.714rem;width:40px"><div aria-hidden="true" style="width:100%;padding-bottom:124.24242424242424%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAAD70lEQVQ4y4WUy28bVRTGXY+deNEqCIhbsWDBGhrnwZYCQmKBBAIhao/HzwToAlAxQohF/woeEq1DkIJSEVWoi5g4iQKt4nrGJCEljSskhBBC3YDEKp57Z2zP4bv3zjg2TstIR+do5POb77wcCt3nyVkslGtwFTe4pjx7OGuxWsbkfxsW+xN2zzD5vbTF/9BNbut1/vmxsDxASB6AZS3+EOKf5g6Isg2HstsdWJsA9Iq/EAFYNWo8OgyzHAn0wZrybCxn8V0Js5gLhZ5h8W7G4k7hDlHa5CuJ3/mwskLjvrA9AYNCF0pJAAFzi3gHhZWkpXIADg/AhPmxprw7BvDum1IZdwEU3gOwB4PSE8fC8kMwR8D2BAwD6sFEybMCZvHK25bqM+Kw7wd7FsDyFh9DvPuWLFPB4D2hUsBQbkX3lfXDJDCYZtAzoQy21w8TykT/RB9RbuWFHSUgE8BMjpgNrMlAz4ZhzJ1rKtjsj0pZAIOXdrTAwTRRZq9nx8AQV4xbfs9MPqpbTMMgInqdRVKmMB5JmooFGBNLu/vfAfTBVvSaUva/T7bBTmPPtuf6VgM2AEttHcHQ+Feh7EOc23vwF3FuF3El70LhR1BYFCf1zYXf5NLaSpmapj+AleQtFu6DvS8uo3CXKI+PFWC5fXicXuY2EYCvix4+DsD+7B2lENae9WGv1VhPGRpfyv+MM8PJoX8O1LWhjumWQ6k6byXr/Jle2UiOw5oFJBT31Z69uHUEe3bTLmVvy2X2dJN1ASMMo53e7gqYC2XPi9/BR8SXNb+cR/F39Cv8en+Pp9fs0sxNonObtifUBTBDwpgDZRImJh3qK0fzfTxtslPB+6lqq/Q0YFNrtne22uqe+54JWCezg37VmZvylQF8BDP8pcz0H7eCfTxzg2iy2vJg3ck1m55aBfSGS8ZO9690w3lO7vGeJ2FGrQWVXCwpkyael26qiQIQA+BgpiaBjoAlVg+9qQ3eObvepscubW4GH9be+ELmnCwshqL6fK/knjIky2Ek1uzxRLV1ML1FAuZObnCa+O7Qe6S00onqX1Esu/BtkDOilyU0kioPLvlU1VbQqq2UrtvxxGqrOQ2lE5VDN/7OdYq98qkXM77sjBauEkDLQS5g4aGrQXlCmYwTVVsOaqZO409e/6d5+oMNGn35ExcwAfJg7kjuKqHMa73yk1eGoShTlC3jJz5rSihA8ZHk5eZoYQmweRcQiqbmPXg3klsiqFt+4H2jTKFQxmcu/SChseLi+Eiq3IxmvxaquhFAASKoamvZJQqfv3LtgdAJAE+mF2R86sKyXI1oqnwGsLs+jAPmaMmyA1grbCzSifOXF/4F4R96Fk45iRkAAAAASUVORK5CYII=" alt="flutter logo" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/67642a0b80f3d50277c44cde8f450e50/1d713/logo_flutter.png 33w,
+/static/67642a0b80f3d50277c44cde8f450e50/1e3cb/logo_flutter.png 65w,
+/static/67642a0b80f3d50277c44cde8f450e50/b1497/logo_flutter.png 130w,
+/static/67642a0b80f3d50277c44cde8f450e50/2ac84/logo_flutter.png 195w,
+/static/67642a0b80f3d50277c44cde8f450e50/159a2/logo_flutter.png 260w,
+/static/67642a0b80f3d50277c44cde8f450e50/7d97b/logo_flutter.png 842w" sizes="(max-width: 130px) 100vw, 130px" /><img loading="lazy" sizes="(max-width: 130px) 100vw, 130px" srcset="/static/67642a0b80f3d50277c44cde8f450e50/1d713/logo_flutter.png 33w,
+/static/67642a0b80f3d50277c44cde8f450e50/1e3cb/logo_flutter.png 65w,
+/static/67642a0b80f3d50277c44cde8f450e50/b1497/logo_flutter.png 130w,
+/static/67642a0b80f3d50277c44cde8f450e50/2ac84/logo_flutter.png 195w,
+/static/67642a0b80f3d50277c44cde8f450e50/159a2/logo_flutter.png 260w,
+/static/67642a0b80f3d50277c44cde8f450e50/7d97b/logo_flutter.png 842w" src="/static/67642a0b80f3d50277c44cde8f450e50/b1497/logo_flutter.png" alt="flutter logo" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><h1 style="color:#60646B;margin:0">Flutter by Example</h1></div></a><nav><ul class="navigation__NavList-sc-1xkby60-0 ImZMA"><li class="navigation__NavListItem-sc-1xkby60-1 iNZSYx"><a href="/">Tutorials</a></li><li class="navigation__NavListItem-sc-1xkby60-1 iNZSYx"><a href="/contributors">Contributors</a></li><li class="navigation__NavListItem-sc-1xkby60-1 iNZSYx"><a href="/blog">Blog</a></li><li class="navigation__NavListItem-sc-1xkby60-1 iNZSYx"><a href="https://www.manning.com/books/flutter-in-action">Book</a></li></ul></nav></div></header></div><main><div class="dartpad"></div><div class="lesson-post__PageLayout-pbruem-0 iilyiP"><div class="layout__MainContentWrapper-l112n8-1 dvNcWI"><div style="margin:50px 0"><h1 style="font-size:45px;margin:0;padding:0">About Brick and setup</h1><p style="display:block;margin-bottom:1.714rem;margin-left:0;padding:0">on <!-- -->Saturday, 25th of July, 2020</p></div><div class="blog_post_styles__BlogPostStyleWrapper-uzp9x5-0 jNJocn"><div class="aside">
+You can find the same content in video form <a href="https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/">on the Flutter by Example youtube channel.</a>
+</div><p><a href="https://github.com/greenbits/brick">Brick</a> is a data persistence library in Flutter. It filters data from multiple sources through a single entrypoint - for example, when requesting a list of users, Brick will poll users in-memory, users in SQLite, and, if all else fails, users in Firestore. All of this happens through a consistent query interface and a bunch of generated code, leaving your app to focus on simply <em>using</em> the data.</p><p>This tutorial will walk through creating models, interacting with an API endpoint, and finally, rendering data.</p><p>As every API varies, one has to be stubbed to plainly illustrate the example.</p><p>Save each API response in a <code>_api</code> folder in the root of a new Flutter app:</p><ol><li><code>_api/customer.json</code><pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529"><span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#BC0056">&quot;customer&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">{</span>
+    <span class="token" style="color:#BC0056">&quot;id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;pizza_ids&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+      <span class="token" style="color:#BC0056">1</span>
+    <span class="token" style="color:#212529">]</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;firstName&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">&quot;Wallace&quot;</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;lastName&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">&quot;Wallaceton&quot;</span>
+  <span class="token" style="color:#212529">}</span>
+<span class="token" style="color:#212529">}</span></code></pre></li><li><code>_api/customers.json</code><pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529"><span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#BC0056">&quot;customers&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+    <span class="token" style="color:#212529">{</span>
+      <span class="token" style="color:#BC0056">&quot;id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;pizza_ids&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+        <span class="token" style="color:#BC0056">1</span>
+      <span class="token" style="color:#212529">]</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;firstName&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">&quot;Wallace&quot;</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;lastName&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">&quot;Wallaceton&quot;</span>
+    <span class="token" style="color:#212529">}</span>
+  <span class="token" style="color:#212529">]</span>
+<span class="token" style="color:#212529">}</span></code></pre></li><li><code>_api/pizza.json</code><pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529"><span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#BC0056">&quot;pizza&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">{</span>
+    <span class="token" style="color:#BC0056">&quot;id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;customer_id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;frozen&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">false</span><span class="token" style="color:#212529">,</span>
+    <span class="token" style="color:#BC0056">&quot;toppings&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+      <span class="token" style="color:#BC0056">&quot;pepperoni&quot;</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;olives&quot;</span>
+    <span class="token" style="color:#212529">]</span>
+  <span class="token" style="color:#212529">}</span>
+<span class="token" style="color:#212529">}</span></code></pre></li><li><code>_api/pizzas.json</code><pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529"><span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#BC0056">&quot;pizzas&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+    <span class="token" style="color:#212529">{</span>
+      <span class="token" style="color:#BC0056">&quot;id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;customer_id&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">1</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;frozen&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">false</span><span class="token" style="color:#212529">,</span>
+      <span class="token" style="color:#BC0056">&quot;toppings&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">[</span>
+        <span class="token" style="color:#BC0056">&quot;pepperoni&quot;</span><span class="token" style="color:#212529">,</span>
+        <span class="token" style="color:#BC0056">&quot;olives&quot;</span>
+      <span class="token" style="color:#212529">]</span>
+    <span class="token" style="color:#212529">}</span>
+  <span class="token" style="color:#212529">]</span>
+<span class="token" style="color:#212529">}</span></code></pre></li></ol><p>Now add <code>shelf: any</code> to your pubspec.yaml. And lastly, create the file that will power our local API server:</p><p><code>server.dart</code></p><pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529"><span class="token" style="color:#212529">import</span> <span class="token" style="color:#BC0056">&#x27;package:shelf/shelf.dart&#x27;</span> <span class="token" style="color:#212529">as</span> shelf<span class="token" style="color:#212529">;</span>
+<span class="token" style="color:#212529">import</span> <span class="token" style="color:#BC0056">&#x27;package:shelf/shelf_io.dart&#x27;</span> <span class="token" style="color:#212529">as</span> io<span class="token" style="color:#212529">;</span>
+<span class="token" style="color:#212529">import</span> <span class="token" style="color:#BC0056">&#x27;dart:io&#x27;</span><span class="token" style="color:#212529">;</span>
+
+<span class="token" style="color:#212529">void</span> <span class="token" style="color:#00677a">main</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#212529">var</span> handler <span class="token" style="color:#212529">=</span> <span class="token" style="color:#212529">const</span> shelf<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">Pipeline</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">addMiddleware</span><span class="token" style="color:#212529">(</span>shelf<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">logRequests</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">addHandler</span><span class="token" style="color:#212529">(</span>_echoRequest<span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+
+  io<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">serve</span><span class="token" style="color:#212529">(</span>handler<span class="token" style="color:#212529">,</span> <span class="token" style="color:#BC0056">&#x27;localhost&#x27;</span><span class="token" style="color:#212529">,</span> <span class="token" style="color:#BC0056">8080</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">then</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">(</span>server<span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">{</span>
+    <span class="token" style="color:#00677a">print</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#BC0056">&#x27;Serving at http://${server.address.host}:${server.port}&#x27;</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+  <span class="token" style="color:#212529">}</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+<span class="token" style="color:#212529">}</span>
+
+Future<span class="token" style="color:#212529">&lt;</span>shelf<span class="token" style="color:#212529">.</span>Response<span class="token" style="color:#212529">&gt;</span> <span class="token" style="color:#00677a">_echoRequest</span><span class="token" style="color:#212529">(</span>shelf<span class="token" style="color:#212529">.</span>Request request<span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">async</span> <span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#212529">final</span> endpoints <span class="token" style="color:#212529">=</span> <span class="token" style="color:#212529">[</span><span class="token" style="color:#BC0056">&quot;customers&quot;</span><span class="token" style="color:#212529">,</span> <span class="token" style="color:#BC0056">&quot;pizza&quot;</span><span class="token" style="color:#212529">,</span> <span class="token" style="color:#BC0056">&quot;pizzas&quot;</span><span class="token" style="color:#212529">]</span><span class="token" style="color:#212529">;</span>
+
+  <span class="token" style="color:#212529">return</span> <span class="token" style="color:#212529">await</span> endpoints
+      <span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">fold</span><span class="token" style="color:#212529">(</span>shelf<span class="token" style="color:#212529">.</span>Response<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">notFound</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#BC0056">&quot;Request ${request.url} does not match a known endpoint&quot;</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">,</span>
+          <span class="token" style="color:#212529">(</span>acc<span class="token" style="color:#212529">,</span> endpoint<span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">async</span> <span class="token" style="color:#212529">{</span>
+    <span class="token" style="color:#212529">final</span> resp <span class="token" style="color:#212529">=</span> <span class="token" style="color:#212529">await</span> <span class="token" style="color:#00677a">_jsonForRequest</span><span class="token" style="color:#212529">(</span>request<span class="token" style="color:#212529">,</span> endpoint<span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+    <span class="token" style="color:#212529">if</span> <span class="token" style="color:#212529">(</span>resp <span class="token" style="color:#212529">!=</span> <span class="token" style="color:#212529">null</span><span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">return</span> shelf<span class="token" style="color:#212529">.</span>Response<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">ok</span><span class="token" style="color:#212529">(</span>resp<span class="token" style="color:#212529">,</span> headers<span class="token" style="color:#212529">:</span> <span class="token" style="color:#212529">{</span><span class="token" style="color:#BC0056">&quot;Content-Type&quot;</span><span class="token" style="color:#212529">:</span> <span class="token" style="color:#BC0056">&quot;application/json&quot;</span><span class="token" style="color:#212529">}</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+    <span class="token" style="color:#212529">return</span> acc<span class="token" style="color:#212529">;</span>
+  <span class="token" style="color:#212529">}</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+<span class="token" style="color:#212529">}</span>
+
+Future<span class="token" style="color:#212529">&lt;</span>String<span class="token" style="color:#212529">&gt;</span> <span class="token" style="color:#00677a">_jsonForRequest</span><span class="token" style="color:#212529">(</span>shelf<span class="token" style="color:#212529">.</span>Request request<span class="token" style="color:#212529">,</span> String fileName<span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">async</span> <span class="token" style="color:#212529">{</span>
+  <span class="token" style="color:#212529">if</span> <span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">!</span>request<span class="token" style="color:#212529">.</span>url<span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">toString</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">startsWith</span><span class="token" style="color:#212529">(</span>fileName<span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">)</span> <span class="token" style="color:#212529">return</span> <span class="token" style="color:#212529">null</span><span class="token" style="color:#212529">;</span>
+  <span class="token" style="color:#212529">return</span> <span class="token" style="color:#212529">await</span> <span class="token" style="color:#00677a">File</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#BC0056">&quot;_api/$fileName.json&quot;</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">.</span><span class="token" style="color:#00677a">readAsString</span><span class="token" style="color:#212529">(</span><span class="token" style="color:#212529">)</span><span class="token" style="color:#212529">;</span>
+<span class="token" style="color:#212529">}</span></code></pre><p>Now that our API is stubbed, we can do the regular Brick install:</p><ol><li>Add the packages to <code>pubspec.yaml</code>:<pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529">dependencies<span class="token" style="color:#212529">:</span>
+  brick_offline_first<span class="token" style="color:#212529">:</span> any
+dev_dependencies<span class="token" style="color:#212529">:</span>
+  brick_offline_first_with_rest_build<span class="token" style="color:#212529">:</span>
+    git<span class="token" style="color:#212529">:</span>
+      url<span class="token" style="color:#212529">:</span> https<span class="token" style="color:#212529">:</span><span class="token" style="color:#212529">/</span><span class="token" style="color:#212529">/</span>github<span class="token" style="color:#212529">.</span>com<span class="token" style="color:#212529">/</span>greenbits<span class="token" style="color:#212529">/</span>brick<span class="token" style="color:#212529">.</span>git
+      path<span class="token" style="color:#212529">:</span> packages<span class="token" style="color:#212529">/</span>brick_offline_first_with_rest_build
+  build_runner<span class="token" style="color:#212529">:</span> any</code></pre></li><li>Setup Brick&#x27;s expected folders:<pre style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#57718e;padding:1em;margin:.5em 0;overflow:auto"><code style="font-family:Consolas, Menlo, Monaco, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, &quot;Courier New&quot;, Courier, monospace;font-size:14px;line-height:1.375;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#f8f9fa;color:#212529">mkdir <span class="token" style="color:#212529">-</span>p lib<span class="token" style="color:#212529">/</span>app<span class="token" style="color:#212529">/</span>adapters lib<span class="token" style="color:#212529">/</span>app<span class="token" style="color:#212529">/</span>db lib<span class="token" style="color:#212529">/</span>app<span class="token" style="color:#212529">/</span>models<span class="token" style="color:#212529">;</span></code></pre></li></ol><p>Now we can get to the fun part.</p></div><hr style="margin-bottom:1.714rem"/><ul style="list-style:none;display:flex;justify-content:space-between"><li style="margin:0;padding:0"><div>previous:<!-- --> <a href="/lesson/adding-a-model">Adding a Model</a></div></li><li style="margin:0;padding:0"><div>next: <a href="/lesson/adding-an-association">Adding an Association</a></div></li></ul><hr style="margin-bottom:1.714rem"/><div id="disqus_thread"></div></div></div></main><div class="layout__FullWidthContentWrapper-l112n8-0 bNlKjA"><div style="padding-top:10px;background:#12202f;color:#FFFFFF"><div style="width:800px;margin:100px auto;border-bottom:1px solid #FFFFFF"><div class="mail-chimp__OptInContainer-sc-1m2j3nv-0 cgWtnK"><h1 style="margin-top:0;text-align:center">Join thousands of Flutter developers.</h1><h3 style="margin:0;text-align:center">Sign up for infrequent updates about Flutter and Dart.</h3><div id="mc_embed_signup"><form action="https://ericwindmill.us14.list-manage.com/subscribe/post?u=ba4877332e56c5f5d88603650&amp;id=c03985072c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group"><input type="email" name="EMAIL" placeholder="Your email address" class="email input-text" id="mce-EMAIL"/></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response"></div><div class="response" id="mce-success-response"></div></div><div class="HideMe"><input type="text" name="b_ba4877332e56c5f5d88603650_b1bfca0682" tabindex="-1" value=""/></div><div class="clear"><input type="submit" value="Get Updates" name="subscribe" id="mc-embedded-subscribe" class="button"/></div></div></form></div></div><ul class="social-links__SocialLinkList-sc-19qtuc3-0 WKAcc"><li class="social-links__ListItem-sc-19qtuc3-1 jiNflK"><p>Elsewhere:</p></li><li class="social-links__ListItem-sc-19qtuc3-1 jiNflK"><a href="https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/">YouTube Channel</a></li><li class="social-links__ListItem-sc-19qtuc3-1 jiNflK"><a href="https://twitter.com/ericwindmill">Twitter</a></li><li class="social-links__ListItem-sc-19qtuc3-1 jiNflK"><a href="https://github.com/ericwindmill/flutter_by_example_static">Github</a></li><li class="social-links__ListItem-sc-19qtuc3-1 jiNflK"><a href="https://www.manning.com/books/flutter-in-action">Book</a></li></ul></div><a href="https://www.manning.com/books/flutter-in-action"><div style="border:1px solid #0175C2;border-radius:25px;display:flex;align-items:center;width:600px;margin:auto"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;max-width:300px;margin-right:3.428rem;min-width:300px;flex:0;border-radius:25px 0 0 25px"><div aria-hidden="true" style="width:100%;padding-bottom:125.33333333333333%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEcklEQVQ4y42VfUxVZRzH79REsQ1zMiO5r1wuhYJGgKYNpUjxJTTJUHm5ooshUhrTUCmV+QYhKpasKcPR1qw/UsiXK2oJIqgLlURqiHIT9QZrKBICXrh+es4RvJeupGf77Tzn7Dmf5/v7ne/veRRD9BocY5iPFwr3l1izbQvS1d3dzaNHj+R4nkvRC3LxUsvxogQc4Ubqlk3yhK6urj7A3nF/i9iBPXdXbx0KjQfrc7KdJssQmw2bUG1zUO4IV/SqG6JXy8AXtEreCvEnc/MKGhrMdDQ10SZCAj3rkqAKR5gUgzWepBnf4YeMFZhydlKeupZzW7dRd6hQ/qix8iI3jhylrrCIh62tdLW3Y21rk8cOCu1pK3RqwkJfZ8eWNVR8lUtJyiqq8/dzcHYE5Rs2UhQ5n2NxRg5/uIDyjelivJij0bHyIjKwV+FgARuuVxHkr2X6skiSl8dz/OMEzu3Yzu/fHeBE/FJMMbFc3JXD5ZzdXN61m5JPVnJuQzrn0zdx32zuUSiAQ0UMFEBvzWjmjVXzQXwAGZkrOJQcjWlDCo3mG1hu3cFcXUPnQyu3r13jZm0t9TU1NNRdp0E8tzTftQOHiJRdvDX4Kz2YqfckOfE99melUpwUzcbJ/pz+LIlTeXso/L6AC2dL+bm0DEtjE+XnL1Bypoyio8e4cvVqbw1FugLqZtAwQ8AmemtJTFzIN2mJ/Lh8KV+vW81OYxS5iUaO7M2iwnSQ2to6mpubsVgsmM1/Ul9fz7179+w/ZaBOhc7PQPqctzFoVUzzVpM5K5Q9kdOoOFJIt5j4T3sH3TbJGs+wjatIVaF8hamTA1g/P5zRI9yJ8RjFsZh5nI6OoPjzFOyMvt3CU94rBglF6oDXWBz1LiqDjjDlaL4wqCn9aBG/rVvJyYRo7gpjyx8IczuCpD6XWlMKaSynPFj4bqSvHlcfHS8LU68eo2dfoC/FMXOpz0ynLDGO21eqnIBWq5WWlhYaxWK379yh1dHYEnSAqOMYLxXbJ/iRP8mPwnnhVKV9yi9LoqivONMD7H6SmtXaxUNhoY6ODtoePMAqVNptI3eJmmDxM/KmBlMQMp6C0CBKk+M5GR/J9ZJTT4D/t43JNZRsI7XeMAEbJ+qXPSmQfcJ72UG+lCUZOb5wJn+cMvUB9hdPFEo9LHXLFJ0n+VOCWD/OwJehE6hctYyfBLCm+PBTFfazfT1W6CrqN92gZG/IG8SKdxkR0/g1JYEDsbOoMhU9V8r2ThEK3byURPioyQ8JZslYX/IXzOX4olnkxs3gaukJebLteYGPtzAVgT5aUiaOY06AH2ujwjn7bR6XBOzu301Ohu5vrJDSHSrtg2o1r76pJWy2OFOUKt6P1HPrZlWfevU3dqqhpHCQVo02UIvHeAEcNQpjUhx11WdEF0hmtjl9aBMm7+0OpyPApceLAzTi7i2AI91Iy8pyOPVwSs1i+YvKykuyse/fb6Wjs9P5GJVSl49R9+Gkbt3c51z+b7rSQu1iB5I6RGrDrh61/wJARbYaVlbORwAAAABJRU5ErkJggg==" alt="flutter in action book cover" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/13e20e79890f016c85b0b4872265c56b/5db04/flutter-in-action.png 75w,
+/static/13e20e79890f016c85b0b4872265c56b/6d161/flutter-in-action.png 150w,
+/static/13e20e79890f016c85b0b4872265c56b/630fb/flutter-in-action.png 300w,
+/static/13e20e79890f016c85b0b4872265c56b/62b1f/flutter-in-action.png 450w,
+/static/13e20e79890f016c85b0b4872265c56b/2a4de/flutter-in-action.png 600w,
+/static/13e20e79890f016c85b0b4872265c56b/9e757/flutter-in-action.png 2586w" sizes="(max-width: 300px) 100vw, 300px" /><img loading="lazy" sizes="(max-width: 300px) 100vw, 300px" srcset="/static/13e20e79890f016c85b0b4872265c56b/5db04/flutter-in-action.png 75w,
+/static/13e20e79890f016c85b0b4872265c56b/6d161/flutter-in-action.png 150w,
+/static/13e20e79890f016c85b0b4872265c56b/630fb/flutter-in-action.png 300w,
+/static/13e20e79890f016c85b0b4872265c56b/62b1f/flutter-in-action.png 450w,
+/static/13e20e79890f016c85b0b4872265c56b/2a4de/flutter-in-action.png 600w,
+/static/13e20e79890f016c85b0b4872265c56b/9e757/flutter-in-action.png 2586w" src="/static/13e20e79890f016c85b0b4872265c56b/630fb/flutter-in-action.png" alt="flutter in action book cover" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><h3 style="margin-right:3.428rem;color:#FFFFFF">You can get all this content and more in one place. Check out my new book Flutter in Action</h3></div></a><div style="width:800px;margin:100px auto 0;padding:25px 0;border-top:1px solid #FFFFFF"><ul style="list-style:none;display:flex"><li style="margin:0">© 2018-2020 Eric Windmill</li><li><a href="https://github.com/ericwindmill/flutter_by_example_static">about the project (readme)</a></li><li><a href="mailto:eric@ericwindmill.com">contact us</a></li></ul></div></div></div><div class="side-table-of-contents__ToCContainer-sc-1b044cw-0 fHdcHI"><div><h4>Handling Data with Brick: Offline First with Rest</h4></div><ol><li><a aria-current="page" class="" href="/lesson/about-brick-and-setup">About Brick and setup</a></li><li><a href="/lesson/adding-a-repository">Adding a Repository</a></li><li><a href="/lesson/adding-a-model">Adding a Model</a></li><li><a href="/lesson/generating-code">Generating Code</a></li><li><a href="/lesson/rendering-models">Rendering Models</a></li><li><a href="/lesson/adding-an-association">Adding an Association</a></li></ol></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-156056355-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/lesson/about-brick-and-setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-cda3ed30b552074d686c.js"],"app":["/app-babd675f1b2905cec432.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-e5cb9e0c77a823b86dc2.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0559109825d05de6d257.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-6e9e042fb4fd30a87878.js"],"component---src-pages-contributors-js":["/component---src-pages-contributors-js-63901b4c5c92a918939b.js"],"component---src-pages-index-js":["/component---src-pages-index-js-42a7d3f9994995259fd2.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3db76e504aa97335e8f8.js"],"component---src-templates-lesson-post-js":["/component---src-templates-lesson-post-js-153495e15dc4fef50e5f.js"],"component---src-templates-tags-page-js":["/component---src-templates-tags-page-js-b0d9fc75312c692fe7fc.js"]};/*]]>*/</script><script src="/polyfill-cda3ed30b552074d686c.js" nomodule=""></script><script src="/webpack-runtime-320f3a78a921bd2474e7.js" async=""></script><script src="/framework-0e8501c0599d79803b4b.js" async=""></script><script src="/app-babd675f1b2905cec432.js" async=""></script><script src="/styles-89fd2ae28bdf06750a71.js" async=""></script><script src="/dbdcb065f719db48432e654e3bf73000d4c121b6-d8551571913b5baa5b3a.js" async=""></script><script src="/c9c126eae92cbcbd555f392e0e3deb97ac6f388a-d5254a4bf75e37e27477.js" async=""></script><script src="/component---src-templates-lesson-post-js-153495e15dc4fef50e5f.js" async=""></script></body><footer><script type="text/javascript" src="https://dartpad.dev/inject_embed.dart.js" defer=""></script></footer></html>
